@@ -1,6 +1,17 @@
-title : Content name
+title : Introduction to MPI
 plan:
-  - title: Part 1
+  - title: Introduction to distributed computing
     statement: markdowns/part1.md
-  - title: Part 2
+  - title: Point-to-Point communication
     statement: markdowns/part2.md
+  - title: Hello world
+    statement: markdowns/ex1.md
+  - title: Barriers
+    statement: markdowns/part3.md
+
+projects:
+  main:
+    root: exercises/
+    runner:
+      name: aveuh/gnu-ompi-python3
+      version: latest
