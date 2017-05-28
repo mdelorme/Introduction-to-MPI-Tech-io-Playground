@@ -14,4 +14,3 @@ projects:
     root: exercises/
     runner:
       name: aveuh/gnu-ompi-python3
-      version: latest
