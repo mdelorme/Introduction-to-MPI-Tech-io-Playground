@@ -21,4 +21,4 @@ Now the first exercise will be to write a program which does the following steps
 * Prints `Hello world, from process #<RANK OF THE PROCESS`.
 * Finalizes MPI and exits.
 
-@[Hello World]({"stubs": ["exercises/01_hello_world/hello_world.cpp"], "command": "sh exercises/01_hello_world/hello_world.sh"})
+@[Hello World]({"stubs": ["01_hello_world/hello_world.cpp"], "command": "sh exercises/01_hello_world/hello_world.sh"})
