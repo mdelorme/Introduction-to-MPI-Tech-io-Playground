@@ -4,6 +4,7 @@ echo -e "\033[1mCompiling\033[0m"
 cd 01_hello_world
 rm -rf out hw
 mpicxx -o hw hello_world.cpp 2> err_log
+ls
 mkdir out
 rc=$?
 if [[ $rc != 0 ]]; then
