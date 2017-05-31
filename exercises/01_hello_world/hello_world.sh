@@ -20,8 +20,5 @@ rc=0
 echo -e "\033[1mExecution\033[0m"
 mpirun -mca btl tcp,self -np 4 -output-filename out/out ./hw
 python check_hw.py
-
-echo "TECHIO> success true"
-
 rm -rf out
 
