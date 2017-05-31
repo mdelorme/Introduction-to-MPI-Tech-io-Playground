@@ -20,6 +20,7 @@ rm -rf out/*
 rc=0
 
 echo -e "\033[1mExecution\033[0m"
+ls
 mpirun -np 4 -output-filename out/out ./hw
 
 for f in `ls out`; do
