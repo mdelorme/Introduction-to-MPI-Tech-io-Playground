@@ -23,6 +23,7 @@ ls out
 for f in `ls out`; do
     echo " **** Output of $f : ****"
     cat out/$f
+done
 
 echo "TECHIO> success true"
 
