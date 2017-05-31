@@ -4,8 +4,6 @@ echo -e "\033[1mCompiling\033[0m"
 cd 01_hello_world
 rm -rf out hw
 mpicxx -o hw hello_world.cpp 2> err_log
-ls
-mkdir out
 rc=$?
 if [[ $rc != 0 ]]; then
     echo -e "\033[1mError\033\0m : mpicxx returned"
@@ -15,8 +13,8 @@ if [[ $rc != 0 ]]; then
     exit $rc
 fi
 echo "Compilation is OK"
-
-rm -rf out/*
+rm -rf out
+mkdir out
 rc=0
 
 echo -e "\033[1mExecution\033[0m"
