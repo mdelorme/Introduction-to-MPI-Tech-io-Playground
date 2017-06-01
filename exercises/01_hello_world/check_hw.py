@@ -1,6 +1,6 @@
 import sys, os
 
-files = os.listdir('out/').sort()
+files = sorted(os.listdir('out/'))
 err = False
 
 for f in files:
