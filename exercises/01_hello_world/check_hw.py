@@ -12,10 +12,10 @@ for f in files:
     nid = int(f[-1])
     res = 'Hello world, from process #{}'.format(nid)
 
-    print(r'TECHIO> message --channel "Process {}" "output : \"{}\""'.format(nid, line))
+    print('TECHIO> message --channel "Process {}" "output : \'{}\'"'.format(nid, line))
     if line != res:
         err = True
-        print(r'TECHIO> message --channel "Process {}" "  -> ERROR, Expected : \"{}\""'.format(nid, res))
+        print('TECHIO> message --channel "Process {}" "  -> ERROR, Expected : \'{}\'"'.format(nid, res))
 
 if err:
     print('TECHIO> success false')
