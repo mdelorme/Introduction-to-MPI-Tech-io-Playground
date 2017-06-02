@@ -31,25 +31,25 @@ The rank of every process, on a communicator is given next to the process, in th
 -[ ] 3 processes
 -[ ] 4 processes
 
-?[On which communicator(s) can we make a collective communication to reach P1 and P3 ?]
--[ ] `COMM_CUSTOM_1`
--[ ] `COMM_CUSTOM_2`
--[ ] `COMM_CUSTOM_3`
--[x] `MPI_COMM_WORLD`
+?[On which communicator(s) can we make a collective communication to reach P1 and P3 ?](multiple)
+-[ ] COMM_CUSTOM_1
+-[ ] COMM_CUSTOM_2
+-[ ] COMM_CUSTOM_3
+-[x] MPI_COMM_WORLD
 -[ ] None
 
-?[On which communicator(s) can we make a collective communication to reach ONLY P1 and P3 ?]
--[ ] `COMM_CUSTOM_1`
--[ ] `COMM_CUSTOM_2`
--[ ] `COMM_CUSTOM_3`
--[ ] `MPI_COMM_WORLD`
+?[On which communicator(s) can we make a collective communication to reach ONLY P1 and P3 ?](multiple)
+-[ ] COMM_CUSTOM_1
+-[ ] COMM_CUSTOM_2
+-[ ] COMM_CUSTOM_3
+-[ ] MPI_COMM_WORLD
 -[x] None
 
-?[On which communicator(s) can we make a Point-to-Point communication between P2 and P3 ?]
--[ ] `COMM_CUSTOM_1`
--[ ] `COMM_CUSTOM_2`
--[x] `COMM_CUSTOM_3`
--[x] `MPI_COMM_WORLD`
+?[On which communicator(s) can we make a Point-to-Point communication between P2 and P3 ?](multiple)
+-[ ] COMM_CUSTOM_1
+-[ ] COMM_CUSTOM_2
+-[x] COMM_CUSTOM_3
+-[x] MPI_COMM_WORLD
 -[ ] None
 
 

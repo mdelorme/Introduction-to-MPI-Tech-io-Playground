@@ -2,7 +2,7 @@ title : Introduction to MPI
 plan:
   - title: Introduction to distributed computing
     statement: markdowns/part1.md
-  - title: Point-to-Point communication
+  - title: MPI_COMM_WORLD, size and ranks
     statement: markdowns/part2.md
   - title: Hello world
     statement: markdowns/ex1.md
