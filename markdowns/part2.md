@@ -26,26 +26,26 @@ If you take a look at the annotated version of the previous figure :
 
 The rank of every process, on a communicator is given next to the process, in the color matcing the communicator. So you see that process number 2 on `MPI_COMM_WORLD` is process 2 on `COMM_CUSTOM_1` and process 0 on `COMM_CUSTOM_3`. There is no implicit way of knowing the rank of a process on a communicator. For this, we need to query the communicator using the function `MPI_Comm_rank`. Same for the size of a communicator, you can find it by calling the function `MPI_Comm_size`. We will use `MPI_Comm_rank` in a practical example in the next lesson. But now, let's test your understanding of the subject :
 
-?[What is the size of `COMM_CUSTOM_2` ?]
+?[What is the size of COMM_CUSTOM_2 ?]
 -[x] 2 processes
 -[ ] 3 processes
 -[ ] 4 processes
 
-?[On which communicator(s) can we make a collective communication to reach $`P1`$ and $`P3`$ ?]
+?[On which communicator(s) can we make a collective communication to reach P1 and P3 ?]
 -[ ] `COMM_CUSTOM_1`
 -[ ] `COMM_CUSTOM_2`
 -[ ] `COMM_CUSTOM_3`
 -[x] `MPI_COMM_WORLD`
 -[ ] None
 
-?[On which communicator(s) can we make a collective communication to reach ONLY $`P1`$ and $`P3`$ ?]
+?[On which communicator(s) can we make a collective communication to reach ONLY P1 and P3 ?]
 -[ ] `COMM_CUSTOM_1`
 -[ ] `COMM_CUSTOM_2`
 -[ ] `COMM_CUSTOM_3`
 -[ ] `MPI_COMM_WORLD`
 -[x] None
 
-?[On which communicator(s) can we make a Point-to-Point communication between $`P2`$ and $`P3`$ ?]
+?[On which communicator(s) can we make a Point-to-Point communication between P2 and P3 ?]
 -[ ] `COMM_CUSTOM_1`
 -[ ] `COMM_CUSTOM_2`
 -[x] `COMM_CUSTOM_3`
