@@ -22,7 +22,7 @@ When a communicator is created, two fundamental properties are determined :
 
 If you take a look at the annotated version of the previous figure :
 
-![MPI_COMM_CUSTOM2](/img/MPI_COMM_CUSTOM_2.png "The ranks of every process has been added, with respect to their communicators (matching colors)")
+![MPI_COMM_CUSTOM2](/img/MPI_COMM_CUSTOM2.png "The ranks of every process has been added, with respect to their communicators (matching colors)")
 
 The rank of every process, on a communicator is given next to the process, in the color matcing the communicator. So you see that process number 2 on `MPI_COMM_WORLD` is process 2 on `COMM_CUSTOM_1` and process 0 on `COMM_CUSTOM_3`. There is no implicit way of knowing the rank of a process on a communicator. For this, we need to query the communicator using the function `MPI_Comm_rank`. Same for the size of a communicator, you can find it by calling the function `MPI_Comm_size`. We will use `MPI_Comm_rank` in a practical example in the next lesson. But now, let's test your understanding of the subject :
 
