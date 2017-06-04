@@ -29,10 +29,10 @@ The datatype must correspond precisely to the data stored in the buffer. For thi
 
 C Type | MPI Type
 -------|---------
-char | MPI_CHAR
-int | MPI_INT
-float | MPI_FLOAT
-double | MPI_DOUBLE
+`char` | `MPI_CHAR`
+`int` | `MPI_INT`
+`float` | `MPI_FLOAT`
+`double` | `MPI_DOUBLE`
 
 There are lots of other types, that you can find in the official [MPI standard documentation](http://mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)
 
