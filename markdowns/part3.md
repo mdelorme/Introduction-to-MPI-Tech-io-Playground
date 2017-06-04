@@ -28,7 +28,7 @@ The reference will always be a pointer to a buffer. This array will hold the dat
 The datatype must correspond precisely to the data stored in the buffer. For this, MPI has predefined types that can be used. Most common types and their C counterparts are :
 
 C Type | MPI Type
------------------
+-------|---------
 char | MPI_CHAR
 int | MPI_INT
 float | MPI_FLOAT
