@@ -8,7 +8,7 @@ MPI is good at a few things that could interest any computer scientist. Since MP
 
 Where MPI really shines is for distributed computing. MPI has become since the early 90's the most used standard for message passing between different nodes on connected architectures. This proves to be invaluable in scientific computing for instance, where numerical simulation often requires hundreds to thousands of interconnected nodes to have sufficient memory. This holds for any application using multiple interconnected computers such as rendering farms. 
 
-![The French supercomputer Curie](img/curie.png "The French supercomputer Curie")
+![The French supercomputer Curie](/img/curie.png "The French supercomputer Curie")
 *The French supercomputer Curie. Supercomputers are heavy users of MPI programs*
 
 When talking about parallelisation it is interesting to note that the actual programs using MPI can still use other means of parallelism. As such, there is nothing preventing a user to combine MPI with GPU parallelism, vectorisation or shared-memory parallelism (such as OpenMP).
