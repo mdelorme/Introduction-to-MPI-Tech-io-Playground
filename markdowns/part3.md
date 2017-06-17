@@ -19,11 +19,11 @@ A send operation, sends a buffer of data of a certain type to another process. A
 
 Let's go over every element one by one an detail what they are.
 
-### A reference to a buffer
+**A reference to a buffer**
 
 The reference will always be a pointer to a buffer. This array will hold the data that you wish to send from the current process to another.
 
-### A datatype
+**A datatype**
 
 The datatype must correspond precisely to the data stored in the buffer. For this, MPI has predefined types that can be used. Most common types and their C counterparts are :
 
@@ -34,14 +34,26 @@ C Type | MPI Type
 `float` | `MPI_FLOAT`
 `double` | `MPI_DOUBLE`
 
-There are lots of other types, that you can find in the official [MPI standard documentation](http://mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)
+There are lots of other types, that you can find in the official [MPI standard documentation](http://mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf). We will see later that it is also possible to create your own custom datatypes.
 
-### A number of elements
+**A number of elements**
 
-This one is pretty self-explanatory. The number of elements in the buffer that you want to send to the destination
+This one is pretty self-explanatory. The number of elements in the buffer that you want to send to the destination.
 
-### A tag
+**A tag**
 
 The tag is a simple integer that identifies the "type" of communication. This is a completely informal value that you put yourself. We will come back on the tag in the section about reception.
+
+**A destination id**
+
+The rank of the process you want to send the data to.
+
+**A communicator**
+
+The communicator on which to send the data to. Remember that the rank of processes might change depending on the communicator you are chosing.
+
+
+All these information are necessary to send a P2P message. 
+
 
 ## Receiving messages

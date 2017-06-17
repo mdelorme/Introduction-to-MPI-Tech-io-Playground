@@ -15,7 +15,7 @@ The default communicator is called `MPI_COMM_WORLD`. It basically groups all the
 
 What that means in practice is that, it is impossible, when communicating on `CUSTOM_COMM_1`, to make a communication that is going to reach process #3. With the same logic, we see that it is impossible to create a Point-to-Point communication from #3 to #1 on `CUSTOM_COMM2` but possible to create such a Point-to-Point communication on `MPI_COMM_WORLD`. Although communicators might seem a bit obscure at the moment, their utility will become clear a bit later. For now, let's only concentrate on `MPI_COMM_WORLD`, which holds every single process ran from the command line. 
 
-When a communicator is created, two fundamental properties are determined :
+Within a communicator :
 
 1- The communicator **size**, which indicates how many processes are grouped in this communicator
 2- Every process has a **rank**, a unique id in the communicator used to communicate.
