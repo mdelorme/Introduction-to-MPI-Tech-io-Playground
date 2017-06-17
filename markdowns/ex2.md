@@ -20,11 +20,7 @@ It is time to code something a bit fancier than just printing your rank id on th
 
 Note the order of the first two operations that are inverted on the two processes ? That is so we avoid one of the most frequent problems with blocking communications : a **deadlock**. Blocking communications, are their name implies, block the processes while the communication is not finished. So if process #0 waits for process #1 to send it a message, and process #1 waits for process #0 to send it a message, both process will be blocked in an endless wait : the deadlock.
 
-## Sending and receiving
-
-Here are the two new functions you are going to be using for this exercise : `MPI_Send` and `MPI_Recv`.
-
-### Emission :
+## Emission :
 
 You can send information to a process using the command `MPI_Send` :
 
@@ -59,7 +55,7 @@ MPI_send(values, 3, MPI_DOUBLE, 10, 6, MPI_COMM_WORLD);
 
 The function also returns an integer. This value is an error code, telling if the communication was successful and in the case it was not, what happened. In case of an error however, you will not be able to directly use this information. By default, MPI sets up an error handler that will catch every error before exiting the calls. The default handler stops the program in case of an error. We will see in a future lesson how to setup the error handler and be more lenient on the send errors. For the moment, let's move on to reception of message.
 
-### Reception :
+## Reception :
 
 The function to call to receive data from a process is very similar from the one to send but has an additional parameter :
 
