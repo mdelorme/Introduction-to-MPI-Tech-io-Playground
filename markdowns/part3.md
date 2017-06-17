@@ -57,3 +57,5 @@ All these information are necessary to send a P2P message.
 
 
 ## Receiving messages
+
+The receiving of a message works in the exact same way as the send operation. However, instead of a destination id, the call will require a source id : the identification of the process from which you are waiting a message. On top of that, depending if you are using blocking or non-blocking communications, you will need additional arguments, but we will cover them in time and place. Let's have a small hands-on now.

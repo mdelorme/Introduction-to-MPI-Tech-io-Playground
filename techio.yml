@@ -10,6 +10,8 @@ plan:
     statement: markdowns/ex1.md
   - title: Point-to-Point communications, part 1
     statement: markdowns/part3.md
+  - title: Point-to-Point communications, exercise 1
+    statement: markdowns/ex2.md
 
 projects:
   main:
