@@ -26,9 +26,6 @@ int main(int argc, char **argv) {
     // 1- Receive the value from process 0 (in other_value)
     // 2- Send the value to process 0
     // 3- Print the product of the two values on stdout
-    MPI_Recv(&other_value, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-    MPI_Send(&local_value, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
-
     std::cout << "..." << std::endl;
   }
   
