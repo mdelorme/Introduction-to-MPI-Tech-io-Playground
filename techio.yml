@@ -12,7 +12,7 @@ plan:
     statement: markdowns/part3.md
   - title: Point-to-Point communications, exercise 1
     statement: markdowns/ex2.md
-  - title: Point-to-Point communications, the MPI_Status structure
+  - title: Point-to-Point communications, MPI_Status
     statement: markdowns/part4.md
   - title: Collective communications
     statement: markdowns/part5.md
