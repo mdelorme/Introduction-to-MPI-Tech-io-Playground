@@ -2,20 +2,36 @@ title : Introduction to MPI
 plan:
   - title: About
     statement: markdowns/about.md
-  - title: Introduction to distributed computing
-    statement: markdowns/part1.md
-  - title: MPI_COMM_WORLD, size and ranks
-    statement: markdowns/part2.md
-  - title: Hello world
-    statement: markdowns/ex1.md
-  - title: Point-to-Point communications
-    statement: markdowns/part3.md
-  - title: Point-to-Point communications, exercise 1
-    statement: markdowns/ex2.md
-  - title: Point-to-Point communications, MPI_Status
-    statement: markdowns/part4.md
+    
+  - title: Introduction
+    description: This chapter introduces distributed computing.
+    plan:
+      - title: Introduction to distributed computing
+        statement: markdowns/intro.md
+      - title: MPI_COMM_WORLD, size and ranks
+        statement: markdowns/comm_world.md
+      - title: Hello world
+        statement: markdowns/hello_world.md
+	
+  - title: Point-to-Point communications, part 1
+    description: This chapter introduces synchronous and asynchronous P2P communications.
+    plan:
+      - title: Point-to-Point communications synchronous
+        statement: markdowns/p2p_blocking.md
+      - title: Point-to-Point communications, exercise 1
+        statement: markdowns/p2p_ex1.md
+      - title: Point-to-Point communications, MPI_Status
+        statement: markdowns/p2p_status.md
+      - title: Point-to-Point communications asynchronous
+        statement: markdowns/p2p_non_blocking.md
+      - title: Point-to-Point communications probing
+        statement: markdowns/p2p_probing.md
+	
   - title: Collective communications
-    statement: markdowns/part5.md
+    description: This chapter introduces collective communications
+    plan:
+      - title: Introduction to collective communications
+        statement: markdowns/intro_collective.md
 
 projects:
   main:
