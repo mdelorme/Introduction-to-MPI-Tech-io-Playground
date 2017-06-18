@@ -1,8 +1,5 @@
 title : Introduction to MPI
 plan:
-  - title: About
-    statement: markdowns/about.md
-    
   - title: Introduction
     description: This chapter introduces distributed computing.
     plan:
