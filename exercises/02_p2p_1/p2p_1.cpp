@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cstdlib>
 #include <mpi.h>
+#include <cstdlib>
 
 int main(int argc, char **argv) {
   MPI_Init(&argc, &argv);
@@ -8,6 +8,7 @@ int main(int argc, char **argv) {
   int rank;
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
+  // Read the local value of the process
   // local_value will hold a specific int for process 0, and another for process 1
   int local_value;
   local_value = atoi(argv[1]);
@@ -25,6 +26,9 @@ int main(int argc, char **argv) {
     // 1- Receive the value from process 0 (in other_value)
     // 2- Send the value to process 0
     // 3- Print the product of the two values on stdout
+    MPI_Recv(&other_value, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    MPI_Send(&local_value, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
+
     std::cout << "..." << std::endl;
   }
   

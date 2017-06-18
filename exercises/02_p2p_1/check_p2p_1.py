@@ -6,6 +6,8 @@ v2 = int(sys.argv[2])
 files = sorted(os.listdir('out/'))
 err = False
 
+print('The random values provided are : {} and {}'.format(v1, v2))
+
 for rank, f in enumerate(files):
     fn = 'out/' + f
 
@@ -18,10 +20,10 @@ for rank, f in enumerate(files):
     else:
         res = v1 * v2
 
-    print('TECHIO> message --channel "Process {}" "{}"'.format(nid, line))
-    if line != res:
+    print('TECHIO> message --channel "Process {}" "{}"'.format(rank, line))
+    if v != res:
         err = True
-        print('TECHIO> message --channel "Process {}" "  -> ERROR, Expected : \'{}\'"'.format(nid, res))
+        print('TECHIO> message --channel "Process {}" "  -> ERROR, Expected : {}"'.format(rank, res))
 
 if err:
     print('TECHIO> success false')
