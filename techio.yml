@@ -12,7 +12,7 @@ plan:
         statement: markdowns/comm_world.md
       - title: Hello world
         statement: markdowns/hello_world.md
-	
+
   - title: Point-to-Point communications, part 1
     description: This chapter introduces synchronous and asynchronous P2P communications.
     plan:
@@ -26,7 +26,7 @@ plan:
         statement: markdowns/p2p_non_blocking.md
       - title: Point-to-Point communications probing
         statement: markdowns/p2p_probing.md
-	
+
   - title: Collective communications
     description: This chapter introduces collective communications
     plan:
