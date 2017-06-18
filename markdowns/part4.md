@@ -1,4 +1,6 @@
-The `MPI_Status` is a struct that you can access if necessary to have more information on the message you just received :
+# Point-to-point communications, the `MPI_Status` structure
+
+You might remember that, in the previous exercise, we overlooked the `MPI_Status` value when receiving. The `MPI_Status` is a struct that you can access if necessary to have more information on the message you just received. For instance, when receiving a message with `MPI_ANY_SOURCE` or `MPI_ANY_TAG` you disregard the origin and tag of the sender. However, you might still want to get this information to post-process the data you just received. The `MPI_Status` struct is defined as followed in OpenMPI :
 
 ```cpp
 struct MPI_Struct {
@@ -19,11 +21,7 @@ struct MPI_Struct {
        droids you're looking for. */
 ```
 
-Now you might wonder why we would need the source and the tag when we already know it, since we have to specify these values in the `MPI_Recv` call. Well in fact, there are two wildcards you are allowed to use when calling `MPI_Recv` : `MPI_ANY_SOURCE` and `MPI_ANY_TAG`. These allow the incoming messages to be of any source or any tag when specified.
-
-You might not want to use the information provided by `MPI_Status`. In this case you can replace the status parameter by `MPI_STATUS_IGNORE` in which case no information will be retrieved.
-
-**Receiving a table of 5 doubles from process 1, 2 or 3 with no tag:**
+Here is an example of reception of 5 doubles from any process, with any tag, but using the `MPI_Status` structure to retrieve the information :
 
 ```cpp
 double values[5];

@@ -1,4 +1,4 @@
-# Point-to-point communication, part 1
+# Point-to-point communication
 
 In the previous exercise, we have seen how to initialise MPI, get a process' rank and the size of a communicator. But for the moment, we did not have a chance to make processes communicate, which is the whole point of MPI.
 
