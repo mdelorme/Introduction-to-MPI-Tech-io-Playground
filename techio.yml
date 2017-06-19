@@ -27,7 +27,7 @@ plan:
         statement: markdowns/p2p_probing.md
       - title: Probing - exercise
         statement: markdowns/p2p_ex3.md
-      - title: Point-to-point communications : conclusion
+      - title: Point-to-point communications - conclusion
         statement: markdowns/p2p_conclusion.md
 
   - title: Collective communications
@@ -47,7 +47,7 @@ plan:
         statement: markdowns/coll_scatter.md
       - title: Scattering and Gathering - exercise
         statement: markdowns/coll_scatter_ex.md
-      - title: Collective communications : conclusion
+      - title: Collective communications - conclusion
         statement: markdowns/coll_conclusion.md
 
   - title: Custom communicators and groups
@@ -63,7 +63,7 @@ plan:
         statement: markdowns/comm_cart.md
       - title: Cartesian topologies - exercise
         statement: markdowns/comm_cart_ex.md
-      - title: Communicators : conclusion
+      - title: Communicators - conclusion
         statement: markdowns/comm_conclusion.md
 
   - title: Additional information
