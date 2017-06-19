@@ -10,26 +10,77 @@ plan:
       - title: Hello world
         statement: markdowns/hello_world.md
 
-  - title: Point-to-Point communications, part 1
+  - title: Point-to-Point communications
     description: This chapter introduces synchronous and asynchronous P2P communications.
     plan:
-      - title: Point-to-Point communications synchronous
+      - title: Blocking communications
         statement: markdowns/p2p_blocking.md
-      - title: Point-to-Point communications, exercise 1
+      - title: Blocking communications - exercise
         statement: markdowns/p2p_ex1.md
-      - title: Point-to-Point communications, MPI_Status
+      - title: MPI_Status
         statement: markdowns/p2p_status.md
-      - title: Point-to-Point communications asynchronous
+      - title: Non-blocking communications
         statement: markdowns/p2p_non_blocking.md
-      - title: Point-to-Point communications probing
+      - title: Non-blocking communications - exercise
+        statement: markdowns/p2p_ex2.md
+      - title: Probing
         statement: markdowns/p2p_probing.md
+      - title: Probing - exercise
+        statement: markdowns/p2p_ex3.md
+      - title: Point-to-point communications : conclusion
+        statement: markdowns/p2p_conclusion.md
 
   - title: Collective communications
     description: This chapter introduces collective communications
     plan:
       - title: Introduction to collective communications
-        statement: markdowns/intro_collective.md
+        statement: markdowns/coll_intro.md
+      - title: Broadcasting
+        statement: markdowns/coll_bcast.md
+      - title: Broadcasting - exercise
+        statement: markdowns/coll_bcast_ex.md
+      - title: Reduction
+        statement: markdowns/coll_red.md
+      - title: Reduction - exercise
+        statement: markdowns/coll_red_ex.md
+      - title: Scattering and Gathering 
+        statement: markdowns/coll_scatter.md
+      - title: Scattering and Gathering - exercise
+        statement: markdowns/coll_scatter_ex.md
+      - title: Collective communications : conclusion
+        statement: markdowns/coll_conclusion.md
 
+  - title: Custom communicators and groups
+    description: This chapters goes over the creation of custom communicators
+    plan:
+      - title: Introduction
+        statement: markdowns/comm_intro.md
+      - title: Splitting
+        statement: markdowns/comm_splitting.md
+      - title: Splitting - exercise
+        statement: markdowns/comm_splitting_ex.md
+      - title: Cartesian topologies
+        statement: markdowns/comm_cart.md
+      - title: Cartesian topologies - exercise
+        statement: markdowns/comm_cart_ex.md
+      - title: Communicators : conclusion
+        statement: markdowns/comm_conclusion.md
+
+  - title: Additional information
+    description: This chapters gives additional information that has been left over
+    plan:
+      - title: Derived types
+        statement: markdowns/misc_types.md
+      - title: Derived types - exercise
+        statement: markdowns/misc_types_ex.md
+      - title: What to expect from MPI-2 ?
+        statement: markdowns/misc_mpi_2.md
+      - title: What to expect from MPI-3 ?
+        statement: markdowns/misc_mpi_3.md
+      - title: What has been left over ?
+        statement: markdowns/misc_left_over.md
+      - title: Conclusion and references
+        statement: markdowns/misc_conclusion.md
 projects:
   main:
     root: exercises/

@@ -1,0 +1,1 @@
+# Cartesian topologies - exercise
