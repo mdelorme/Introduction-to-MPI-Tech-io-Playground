@@ -23,14 +23,19 @@ MPI in its first version is really simple and straightforward. With the advance 
 
 If you choose to try MPI on your computer, the latest versions of OpenMPI (version 2.1.1 as this tutorial is written) are fully MPI-3 compliant. So everything you read on the net on the standard should be doable in such a version.
 
-## What next ?
+## What will I learn ?
 
 The whole tutorial is designed as a hands on session where we will see concepts and will use them at the same time. We won't go too much into the details of the standard or the implementations, but mostly on the big picture, the concepts to know and to use to design your first distributed program.
 
 The next lessons will be dedicated on simple initialisation and blocking point-to-point communications. After that, we will see collective communications, non-blocking point-to-point operations and finally how to create communicators and derived datatypes.
 
+## What are the requirements ?
 
+It is recommended that you already know a bit of C/C++. The examples will be given in C++ and the exercises will be compiled with g++ so that you can use C or C++. It is necessary that you know basic C/C++ syntax such as control and conditional statements, how to print on stdout. It is also necessary that you understand the basics of memory management in C/C++. MPI being a library heavily manipulating data in memory and transfering buffers, it is better to understand what pointers are and how to manipulate them to complete the course.
 
+Please note that C and C++ are not the only languages that can be used to do distributed computing with MPI. Most notably, every MPI implementation is also compatible with Fortran. On top of that, lots of interpreted languages have libraries allowing their developers to use mpi in an indirect way. For instance, Python users can use the library mpi4py.
 
+## Can I use MPI on my local computer ?
 
+Yes, it is possible. You need to install an implementation of MPI. If you are using Linux or MacOS, then the simplest way to get an implementation of MPI is to install the latest packages of OpenMPI. If you are using Windows, you can use Cygwin to use OpenMPI or you can install MS-MPI, the Microsoft version. This tutorial is based on OpenMPI, but this should not make any noticeable difference in the commands.
 
