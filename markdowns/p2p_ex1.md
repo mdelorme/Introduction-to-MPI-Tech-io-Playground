@@ -65,6 +65,8 @@ As you can see, there is an additional `status` parameter. Let's ignore this by 
 
 On top of the usual parameters, there are two wildcards that can be used. `MPI_ANY_SOURCE` instead of a precise id for the source of the message indicates you are ready to receive a message from any source. `MPI_ANY_TAG` has the same meaning, but for any tag.
 
+Finally, the `count` parameter represents the **maximum** number of elements you are expecting to receive in the communication. The actual number received can thus be less or equal. If you receive more elements, an error will be triggered.
+
 Let's now see a few example calls to `MPI_Recv` :
 
 
