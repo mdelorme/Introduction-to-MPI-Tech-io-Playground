@@ -31,3 +31,5 @@ std::cout << "Received from process " << status.MPI_SOURCE
           << "; with tag " << status.MPI_TAG << std::endl;
 ```
 
+We will see later in this chapter how to use the `MPI_STATUS` information to get access to more information. For instance, the status can be used to probe how many elements are/were being sent in a communication before even receiving it.
+
