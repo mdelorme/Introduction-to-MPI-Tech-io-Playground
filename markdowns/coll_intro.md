@@ -22,4 +22,4 @@ Collective communications allow us to exchange more easily information across al
 * **Gather**  : A single process assembles the data from different process in a buffer
 * **All to all** : Every process sends data to every other process.
 
-In the next lessons, we are going to see more deeply each of these types of collective communications and examples of how to apply them to computational problems.
+In the next lessons, we are going to see more deeply each of these types of collective communications (apart from All to all communications) and we will apply them to computational problems.
