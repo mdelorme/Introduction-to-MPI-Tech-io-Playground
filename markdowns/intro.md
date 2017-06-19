@@ -84,10 +84,10 @@ The course is splitted in chapters where each chapter is dedicated to a certain 
 ## References
 
 There are a few references that are good to always have bookmarked when dealing with MPI.
-* First of all, the latest reference of the [MPI standard](http://mpi-forum.org/docs/). It is, huge and hard to read, but indispensible if you want to understand what lies beyond the surface of the API (a lot of things which will not be covered here).
+* First of all, the latest reference of the [MPI standard](http://mpi-forum.org/docs/). It is huge and hard to read but indispensible if you want to understand what lies beyond the surface of the API (a lot of things which will not be covered here).
 
-* Another necessary tool is the API reference of your implementation. Here's [OpenMPI's](https://www.open-mpi.org/doc/current/) and [MPICH's](https://www.mpich.org/static/docs/v3.1/www3/) (MS-MPI is based on MPICH, so this will be the API documentation for Windows users). These API references are usually ... pretty coarse to say the least, but provide every signature function as well as some additional information.
+* Another necessary tool is the API reference of your implementation. Here's [OpenMPI's](https://www.open-mpi.org/doc/current/) and [MPICH's](https://www.mpich.org/static/docs/v3.1/www3/) (MS-MPI is based on MPICH, so this will be the API documentation for Windows users). These API references are usually ... pretty coarse to say the least, but provide every function signature as well as some additional information.
 
-* The [MPI-tutorial](http://mpitutorial.com) website is the starting point of many MPI developers. It is extremely useful and complete and provides different examples. This tutorial only aims at reaching such a level of pedagogical information. To be completely honest, this tutorial would not exist if MPI-tutorial was an interactive website such as tech.io.
+* The [MPI Tutorial](http://mpitutorial.com) website is the starting point of many MPI developers. It is extremely useful and provides lots of very clear examples for everything MPI-1 related. This tutorial only aims at reaching such a level of pedagogical information. To be completely honest, this tutorial would not exist if MPI Tutorial was an interactive website such as tech.io.
 
 With these three resources and this interactive course, you should be ready to take on the world of distributed computing !
