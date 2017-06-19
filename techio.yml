@@ -17,13 +17,13 @@ plan:
         statement: markdowns/p2p_blocking.md
       - title: Blocking communications - exercise
         statement: markdowns/p2p_ex1.md
-      - title: MPI_Status
+      - title: MPI_Status retrieval
         statement: markdowns/p2p_status.md
       - title: Non-blocking communications
         statement: markdowns/p2p_non_blocking.md
       - title: Non-blocking communications - exercise
         statement: markdowns/p2p_ex2.md
-      - title: Probing
+      - title: Probing an incoming communication
         statement: markdowns/p2p_probing.md
       - title: Probing - exercise
         statement: markdowns/p2p_ex3.md
@@ -39,10 +39,12 @@ plan:
         statement: markdowns/coll_bcast.md
       - title: Broadcasting - exercise
         statement: markdowns/coll_bcast_ex.md
-      - title: Reduction
+      - title: Reductions
         statement: markdowns/coll_red.md
       - title: Reduction - exercise
-        statement: markdowns/coll_red_ex.md
+        statement: markdowns/coll_red_ex1.md
+      - title: Reduction - exercise 2
+        statement: markdowns/coll_red_ex2.md
       - title: Scattering and Gathering 
         statement: markdowns/coll_scatter.md
       - title: Scattering and Gathering - exercise
