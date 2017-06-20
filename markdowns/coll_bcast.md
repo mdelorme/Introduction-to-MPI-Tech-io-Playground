@@ -17,3 +17,7 @@ The second implementation is dynamic and relies on a tree structure. Basically, 
 As you can see, the first implementation requires 8 steps while the second only 4. More generally, the tree algorithm has a complexity in $`O(log n)`$.
 
 These are two examples of implementation for a broadcast algorithm. Now the beauty of the implementations such as OpenMPI is that they have [decision algorithms](https://www.open-mpi.org/papers/workshop-2006/tue_07_coll_and_topo.pdf) running on top of your calls, that choose which algorithm to apply depending on your bandwidth, quantity of data and processes. As per OpenMPI, it is also possible to include your [own implementation](https://www.open-mpi.org/papers/ics-2004/ics-2004.pdf) in the code if you feel like your code would benefit from a very specific algorithm.
+
+As for actual quantitative comparisons, [MPI Tutorial](http://mpitutorial.com/tutorials/mpi-broadcast-and-collective-communication/) has a very nice comparison program between the first version and whatever your implementation of MPI will use for broadcasting an array. It is really interesting to take a look at the code and play a bit with it locally.
+
+Now that we have seen what a broadcast is and why it's interesting to use a dedicated function of the implementation, let's move to a small exercise to code our first broadcast in MPI.
