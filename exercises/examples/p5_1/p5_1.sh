@@ -21,7 +21,5 @@ rm -rf out
 
 echo "TECHIO> success true"
 
-ompi_info
-
 
 
