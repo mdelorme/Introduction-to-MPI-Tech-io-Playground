@@ -16,7 +16,7 @@ if [[ $rc != 0 ]]; then
 fi
 echo "Compilation is OK"
 echo -e "Execution ... "
-mpirun -mca btl tcp,self -np 5 ./bcast_p2p
+mpirun -mca btl sm,tcp,self -np 5 ./bcast_p2p
 rm -rf out
 
 echo "TECHIO> success true"
