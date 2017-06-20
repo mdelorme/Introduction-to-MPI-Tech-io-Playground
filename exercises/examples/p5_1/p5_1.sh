@@ -9,6 +9,7 @@ rc=$?
 if [[ $rc != 0 ]]; then
     echo -e "Error : mpicxx returned"
     cat err_log
+    echo -e "Please do not modify the provided code. They are not exercises but mere examples."
     echo "TECHIO> success false"
     rm -rf out
     exit $rc
@@ -19,6 +20,8 @@ mpirun -mca btl tcp,self -np 5 ./bcast_p2p
 rm -rf out
 
 echo "TECHIO> success true"
+
+ompi_info
 
 
 
