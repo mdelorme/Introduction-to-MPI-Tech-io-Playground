@@ -72,9 +72,9 @@ plan:
     description: This chapter gives an introduction to scalability and performance evaluation
     plan:
       - title: Introduction
-      	statement: markdowns/scal_intro.md
+        statement: markdowns/scal_intro.md
       - title: Measuring execution speed
-      	statement: markdowns/scal_speed.md
+        statement: markdowns/scal_speed.md
       - title: Amdahl's and Gustafson's law
         statement: markdowns/scal_amdahl.md
       - title: Strong and weak scaling
