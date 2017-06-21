@@ -1,8 +1,8 @@
-# Non blocking communications
+# Non-blocking communications
 
 For the moment, we have only seen **blocking** (or synchronous) point-to-point communication. That means that when a process sends or receive information, it has to wait for the transmission to end to get back to what it was doing. In some applications, this can be terribly limiting. Let's take a first example to figure out why :
 
-![Blocking limit 1](/img/blocking_limit_1.svg)
+![Blocking limit 1](/img/SVG/blocking_non_blocking.svg)
 
 In this case, process 0 has some information to send to process 1. But both are working on very different things and, as such, take different time to finish their computations. Process 0 is ready to send its data first, but since process 1 has not finished its own computations, process 0 has to wait for process 1 to be ready before getting back to its own work. Process 1 finishes treating the data really quickly and now waits for process 0 to finish for getting new data. This way of sending messages is possible in MPI and called **non-blocking** or **asynchronous** communications.
 
@@ -65,7 +65,8 @@ Work for 3 seconds
 Initialise the send to process 1
 Work for 6 seconds
   Every 1ms, probe process 1 and communicate if necessary
-Send the second batch of data to process 1
+Initialise the second send to process 1
+Wait for process 1 to receive the data
 ```
 
 ** Process 1**
