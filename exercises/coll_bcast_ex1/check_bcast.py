@@ -31,7 +31,10 @@ for rank, f in enumerate(files):
     else:
         res = p2
 
-    print('TECHIO> message --channel "Process {}" "Result : {}"'.format(rank, line))
+    if line[0] == '-':
+        line = "\\" + line
+
+    print('TECHIO> message --channel "Process {}" "{}"'.format(rank, line))
     if abs(v-res) > 1e-5:
         err = True
         print('TECHIO> message --channel "Process {}" "  -> ERROR, Expected : {}"'.format(rank, res))
