@@ -92,9 +92,9 @@ plan:
       - title: Derived types - exercise
         statement: markdowns/misc_types_ex.md
       - title: Error handling
-        statement: markdown/misc_err.md
+        statement: markdowns/misc_err.md
       - title: Error handling - exercise
-        statement: markdown/misc_err_ex.md
+        statement: markdowns/misc_err_ex.md
       - title: What to expect from MPI-2 ?
         statement: markdowns/misc_mpi_2.md
       - title: What to expect from MPI-3 ?
