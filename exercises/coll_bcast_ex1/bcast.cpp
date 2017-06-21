@@ -39,6 +39,7 @@ int main(int argc, char **argv) {
 
   
   // Printing the result and terminating the program
+  // Precision is set high for the validation process, please do not modify this.
   std::cout << std::setprecision(16) << sum << std::endl;
   
   MPI_Finalize();
