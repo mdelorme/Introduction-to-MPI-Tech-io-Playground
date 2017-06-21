@@ -1,1 +1,1 @@
-# Reductions - exercise
+# Reductions - exercise 1

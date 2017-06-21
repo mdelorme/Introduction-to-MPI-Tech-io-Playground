@@ -1,6 +1,6 @@
 # Point-to-point communications, exercise 1
 
-## The statement
+## Statement
 
 It is time to code something a bit fancier than just printing your rank id on the screen. Let's have an actual communication between two processes. The objective of the exercise is as follows : The program will be ran with two processes. Your program will be given two random integers on the command line and read into a variable `local_value`. Then, depending on the id of the process, your program will have different behaviours :
 
