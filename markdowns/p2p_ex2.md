@@ -1,4 +1,4 @@
-# Non-blocking communciations - exercise
+# Non-blocking communications - exercise
 
 Now it is time to dig deeper in non-blocking communications and try to code our first version of the algorithm presented in last section. Let's see again this algorithm for both processes :
 
