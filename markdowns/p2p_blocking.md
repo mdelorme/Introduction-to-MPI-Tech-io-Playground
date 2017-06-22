@@ -4,7 +4,7 @@ In the previous exercise, we have seen how to initialise MPI, get a process' ran
 
 As explained in lesson 2, there are two types of communications, point-to-point (that we are going to call P2P from now on), and collective. P2P communications are divided in two operations : **Send** and **Receive**, which names are pretty self-explanatory.
 
-The most basic forms of P2P communication are called **blocking** or **synchronous** communications. The process sending a message will be waiting until the process receiving has finished receiving all the information. This is the easiest form of communications but not necessarily the fastest as we will see in the following lessons.
+The most basic forms of P2P communication are called **blocking** communications. The process sending a message will be waiting until the process receiving has finished receiving all the information. This is the easiest form of communications but not necessarily the fastest as we will see in the following lessons.
 
 ## Sending messages
 

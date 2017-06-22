@@ -1,10 +1,10 @@
 # Non-blocking communications
 
-For the moment, we have only seen **blocking** (or synchronous) point-to-point communication. That means that when a process sends or receive information, it has to wait for the transmission to end to get back to what it was doing. In some applications, this can be terribly limiting. Let's take a first example to figure out why :
+For the moment, we have only seen **blocking** point-to-point communication. That means that when a process sends or receive information, it has to [wait](https://cvw.cac.cornell.edu/MPIP2P/rendezvous.html) (Animation from Cornell virtual workshop) for the transmission to end to get back to what it was doing. In some applications, this can be terribly limiting. Let's take a first example to figure out why :
 
 ![Blocking limit 1](/img/blocking_non_blocking.png)
 
-In this case, process 0 has some information to send to process 1. But both are working on very different things and, as such, take different time to finish their computations. Process 0 is ready to send its data first, but since process 1 has not finished its own computations, process 0 has to wait for process 1 to be ready before getting back to its own work. Process 1 finishes treating the data really quickly and now waits for process 0 to finish for getting new data. This way of sending messages is possible in MPI and called **non-blocking** or **asynchronous** communications.
+In this case, process 0 has some information to send to process 1. But both are working on very different things and, as such, take different time to finish their computations. Process 0 is ready to send its data first, but since process 1 has not finished its own computations, process 0 has to wait for process 1 to be ready before getting back to its own work. Process 1 finishes treating the data really quickly and now waits for process 0 to finish for getting new data. This way of sending messages is possible in MPI and called **non-blocking** communications.
 
 Now this is an ideal case where process 0 could be informed that process 1 is available for discussion as soon as it is. Unfortunately in computer science terms, it would mean you have an additional process running in the background and monitoring the availability of both processes, which is not very efficient.
 
@@ -82,6 +82,3 @@ Wait for a communication from process 0
 It makes the code a little bit more complex. Also, note that we are sort of cheating. Since we already know the time taken by both processes in the work phases, we make things a bit easier by forcing process 1 to wait for the data. The important part is in process 0 where the probing is done every millisecond.
 
 What's next ? I suppose you are expecting the C++ code ? Well, this one you will have to write in the exercise that is coming next !
-
-
-

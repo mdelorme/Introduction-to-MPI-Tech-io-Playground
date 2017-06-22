@@ -95,5 +95,5 @@ MPI_Recv(&values, 3, MPI_DOUBLE, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, MP
 
 It is always tempting to go the easy way and always use `MPI_ANY_TAG` or just a tag 0 for all your messages. But as your application grows more and more complex, having specific tags for every type of communication helps you debug, ensure the synchronisations are done correctly, and gives more semantics to your code. Do hesitate to use constants to give more meaning to your tags.
 
-@[P2P part 1]({"stubs": ["02_p2p_1/p2p_1.cpp"], "command": "bash 02_p2p_1/p2p_1.sh", "layout": "aside"})
+@[Blocking communications]({"stubs": ["p2p_blocking/blocking.cpp"], "command": "bash p2p_blocking/blocking.sh", "layout": "aside"})
 

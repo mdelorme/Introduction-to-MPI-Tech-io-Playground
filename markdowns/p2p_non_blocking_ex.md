@@ -70,9 +70,9 @@ Let's start with `MPI_Test`. As for `MPI_Wait`, the parameters `request` and `st
 
 `MPI_Testany` should now be completely obvious. It sets `flag` to a non-zero value if any request is fulfillable. If so, `status` and `index` are also given a value.
 
-## Examples
+## Example
 
-All of this is a lot of information, so here are a few examples, showing you how to use all of these calls. We consider two or three processes. The data is stored in a variable called `buffer`, defined as an array of `int` of size `buffer_count`.
+All of this is a lot of information, so here is a simple example using `MPI_Isend`, `MPI_Irecv`, `MPI_Wait` and `MPI_Test`, showing you how to use all of these calls. We consider two or three processes. The data is stored in a variable called `buffer`, defined as an array of `int` of size `buffer_count`.
 
 **Two processes, waiting and testing on only one request**
 
@@ -99,17 +99,23 @@ if (rank == 0) {
     MPI_Wait(&request, &status);
 }
 else {
-  MPI_IRecv(buffer, buffer_count, MPI_INT, 0, 0, MPI_COMM_WORLD, &request);
+  MPI_Irecv(buffer, buffer_count, MPI_INT, 0, 0, MPI_COMM_WORLD, &request);
 
   // Here we just wait for the message to come
   MPI_Wait(&request, &status);
 }
 ```
 
-**Three processes, waiting and testing on multiple requests**
+Finally there is one last thing you need to know : It is possible to match non-blocking and blocking communications. For instance, you can have a `MPI_Isend` on one process being retrieved by a `MPI_Recv` on another process. Nothing prevents you from doing that !
 
-```cppp
-MPI_Requests request[2];
-MPI_Status   status;
-int          requests_left
+## Exercise
 
+You are finally ready to code this exercise. Remember the algorithm is at the top of the lesson so feel free to refer to that. Be careful when using `MPI_Test` to always add a `MPI_Wait` in case the request has not been completing even though your work is finished.
+
+In the exercise you are provided with two files : `blocking.cpp` that describes the blocking version and `non_blocking.cpp` the one you have to modify. Don't modify `blocking.cpp` it is only there as a mean to present/remind you the way the blocking version of this scenario is done.
+
+**Important** : This exercise is one of the most difficult of this course. Take your time, and think everything through. Don't hesitate to test every intermediate steps. Buffers are printed at each step to make sure that you are receiving the correct data. The blocking version will give you the values of the buffers you are supposed to expect.
+
+At the end, if you have succeeded, the buffers should have the same values as for the blocking version, but the execution time should be smaller.
+
+@[Non blocking communications]({"stubs": ["p2p_non_blocking/non_blocking.cpp", "p2p_non_blocking/blocking.cpp"], "command": "bash p2p_non_blocking/non_blocking.sh", "layout": "aside"})

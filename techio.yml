@@ -16,13 +16,13 @@ plan:
       - title: Blocking communications
         statement: markdowns/p2p_blocking.md
       - title: Blocking communications - exercise
-        statement: markdowns/p2p_ex1.md
+        statement: markdowns/p2p_blocking_ex.md
       - title: MPI_Status retrieval
         statement: markdowns/p2p_status.md
       - title: Non-blocking communications
         statement: markdowns/p2p_non_blocking.md
       - title: Non-blocking communications - exercise
-        statement: markdowns/p2p_ex2.md
+        statement: markdowns/p2p_non_blocking_ex.md
       - title: Race conditions
         statement: markdowns/p2p_race_conditions.md
       - title: Probing an incoming communication
