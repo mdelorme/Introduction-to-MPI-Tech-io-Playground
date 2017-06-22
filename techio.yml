@@ -6,9 +6,9 @@ plan:
       - title: Introduction to distributed computing
         statement: markdowns/intro.md
       - title: MPI_COMM_WORLD, size and ranks
-        statement: markdowns/comm_world.md
+        statement: markdowns/intro_comm_world.md
       - title: Hello world
-        statement: markdowns/hello_world.md
+        statement: markdowns/intro_hello_world.md
 
   - title: Point-to-Point communications
     description: This chapter introduces synchronous and asynchronous P2P communications.
@@ -29,6 +29,8 @@ plan:
         statement: markdowns/p2p_probing.md
       - title: Probing - exercise
         statement: markdowns/p2p_ex3.md
+      - title: Communication modes
+        statement: markdowns/p2p_modes.md
       - title: Point-to-point communications - conclusion
         statement: markdowns/p2p_conclusion.md
 
