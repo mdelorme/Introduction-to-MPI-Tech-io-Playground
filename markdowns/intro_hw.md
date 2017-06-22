@@ -31,7 +31,7 @@ Now the first exercise will be to write a program which does the following steps
 * Prints `Hello world, from process #<RANK OF THE PROCESS`.
 * Finalizes MPI and exits.
 
-@[Hello World]({"stubs": ["01_hello_world/hello_world.cpp"], "command": "bash 01_hello_world/hello_world.sh", "layout": "aside"})
+@[Hello World]({"stubs": ["intro_hello_world/hello_world.cpp"], "command": "bash intro_hello_world/hello_world.sh", "layout": "aside"})
 
 ## Notes on how to run this locally
 If you try to compile this code locally, you might run into problems. There is a simple way to compile all MPI codes. When you install any implementation, such as OpenMPI or MPICH, wrapper compilers are provided. For instance, if you were to compile this code after having installed an OpenMPI distribution, you would have to replace the simple compiler line :

@@ -39,48 +39,6 @@ Please note that C and C++ are not the only languages that can be used to do dis
 
 Yes, it is possible. You need to install an implementation of MPI. If you are using Linux or MacOS, then the simplest way to get an implementation of MPI is to install the latest packages of OpenMPI. If you are using Windows, you can use Cygwin to use OpenMPI or you can install MS-MPI, the Microsoft version. This tutorial is based on OpenMPI, but this should not make any noticeable difference in the commands.
 
-## Outline
-
-The course is splitted in chapters where each chapter is dedicated to a certain topic (except the last one). The general outline is the following :
-
-* Introduction
-  * Introduction to distributed computing
-  * MPI_COMM_WORLD, size and ranks
-  * Exercise : Hello world
-* Point-to-point communications
-  * Blocking communications
-  * Exercise
-  * MPI_Status retrieval
-  * Non-blocking communications
-  * Exercise
-  * Probing an incoming communication
-  * Exercise
-  * Point-to-point communications : conclusion
-* Collective communications
-  * Introduction to collective communications
-  * Broadcasting
-  * Exercise
-  * Reductions
-  * Exercise 1
-  * Exercise 2
-  * Scattering and Gathering
-  * Exercise
-  * Collective communications : conclusion
-* Custom communicators and groups
-  * Introduction to communicators
-  * Splitting
-  * Exercise
-  * Cartesian topologies
-  * Exercise
-  * Custom communicators : conclusion
-* Additional information
-  * Derived types
-  * Exercise
-  * What to expect from MPI-2
-  * What to expect from MPI-3
-  * What has been left over ?
-  * Conclusions and references
-
 ## References
 
 There are a few references that are good to always have bookmarked when dealing with MPI.
@@ -90,4 +48,6 @@ There are a few references that are good to always have bookmarked when dealing 
 
 * The [MPI Tutorial](http://mpitutorial.com) website is the starting point of many MPI developers. It is extremely useful and provides lots of very clear examples for everything MPI-1 related. This tutorial only aims at reaching such a level of pedagogical information. To be completely honest, this tutorial would not exist if MPI Tutorial was an interactive website such as tech.io.
 
-With these three resources and this interactive course, you should be ready to take on the world of distributed computing !
+* [MPIP2P](https://cvw.cac.cornell.edu/MPIP2P/), a tutorial part of the Cornell Virtual Workshop. It explains very well all the subtleties behind Point-to-Point communications and has very good diagrams, especially for the communication modes.
+
+With these resources and this interactive course, you should be ready to take on the world of distributed computing !

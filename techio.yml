@@ -8,7 +8,7 @@ plan:
       - title: MPI_COMM_WORLD, size and ranks
         statement: markdowns/intro_comm_world.md
       - title: Hello world
-        statement: markdowns/intro_hello_world.md
+        statement: markdowns/intro_hw.md
 
   - title: Point-to-Point communications
     description: This chapter introduces synchronous and asynchronous P2P communications.
