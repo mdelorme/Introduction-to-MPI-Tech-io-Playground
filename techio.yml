@@ -23,6 +23,8 @@ plan:
         statement: markdowns/p2p_non_blocking.md
       - title: Non-blocking communications - exercise
         statement: markdowns/p2p_ex2.md
+      - title: Race conditions
+        statement: markdowns/p2p_race_conditions.md
       - title: Probing an incoming communication
         statement: markdowns/p2p_probing.md
       - title: Probing - exercise
