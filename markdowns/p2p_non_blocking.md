@@ -6,9 +6,7 @@ For the moment, we have only seen **blocking** point-to-point communication. Tha
 
 In this case, process 0 has some information to send to process 1. But both are working on very different things and, as such, take different time to finish their computations. Process 0 is ready to send its data first, but since process 1 has not finished its own computations, process 0 has to wait for process 1 to be ready before getting back to its own work. Process 1 finishes treating the data really quickly and now waits for process 0 to finish for getting new data. This way of sending messages is possible in MPI and called **non-blocking** communications.
 
-Now this is an ideal case where process 0 could be informed that process 1 is available for discussion as soon as it is. Unfortunately in computer science terms, it would mean you have an additional process running in the background and monitoring the availability of both processes, which is not very efficient.
-
-Instead, you can see non-blocking communications as a way to prepare everything for the communication, and once in a while, both process check their availability to do a transfer. This might be a bit obscure so let's work an example together. First in pseudo-code and then in C++. Let's imagine that process 0 has first to work for 3 seconds, then for 6. At the same time, process 1 has to work for 5 seconds, then for 3. They must synchronise some time in the middle, and at the end.
+What is happening in MPI is a bit different. Non-blocking communications always require to be initialised and completed. What that means is that now, we will call a send and a receive commands to initialise the communication. Then, instead of waiting to complete the send (or the receive), the process will continue working, and will check once in a while to see if the communication is completed. This might be a bit obscure so let's work an example together. First in pseudo-code and then in C++. Let's imagine that process 0 has first to work for 3 seconds, then for 6. At the same time, process 1 has to work for 5 seconds, then for 3. They must synchronise some time in the middle, and at the end.
 
 ## Blocking version
 
@@ -55,7 +53,7 @@ Please note that we use a different tag to denote the two different communicatio
 
 ## Non-blocking version
 
-We can do better than this by using non-blocking communications. Instead of process 0 waiting for process 1 for the first communication, process 0 can continue to work and only probe if process 1 is ready for communication every millisecond. To be honest, this is a toy-example. In real-life application, the probing will be done at very specific points of your code. There are no real specificities here, so you will have to decide how the probing and synchronisation is done.
+We can do better than this by using non-blocking communications. Instead of process 0 waiting for process 1 for the first communication, process 0 can continue to work and only probe if process 1 is ready for communication every millisecond. To be honest, this is a toy-example. In real-life application, the probing will be done at very specific points of your code. There are no real specificities here, so you will have to decide when the probing is done.
 
 Here is the pseudo-code of the non-blocking version :
 

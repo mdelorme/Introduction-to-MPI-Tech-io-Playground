@@ -61,7 +61,7 @@ As for the blocking communications, it is possible to replace the pointer to a `
 
 Testing is a little bit different. As we've seen right before, waiting blocks the process until the request (or a request) is fulfilled. Testing checks if the request can be completed. If it can, the request is automatically completed and the data transferred. As for wait, there are two waits of testing : `MPI_Test` and `MPI_Testany`. They can be called as follow :
 
-```cppp
+```cpp
 int MPI_Test(MPI_Request *request, int *flag, MPI_Status *status);
 int MPI_Testany(int count, MPI_Request array_of_requests[], int *index, int *flag, MPI_Status *status);
 ```
