@@ -21,7 +21,7 @@ Work for 6 seconds
 Blocking-send data to process 1
 ```
 
-** Process 1**
+**Process 1**
 
 ```
 Work for 5 seconds
@@ -57,7 +57,7 @@ We can do better than this by using non-blocking communications. Instead of proc
 
 Here is the pseudo-code of the non-blocking version :
 
-** Process 0**
+**Process 0**
 ```
 Work for 3 seconds
 Initialise the send to process 1
@@ -67,7 +67,7 @@ Initialise the second send to process 1
 Wait for process 1 to receive the data
 ```
 
-** Process 1**
+**Process 1**
 ```
 Work for 5 seconds
 Initialise receive from process 0
