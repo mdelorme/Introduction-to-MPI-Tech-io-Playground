@@ -10,6 +10,16 @@ A race condition is when two process try to access some data at the same time. F
 
 ![Race conditions](/img/p2p_race_condition.png)
 
+One additional thing that is pictured on the image is that it does not matter if your `MPI_Irecv` is actually called after `MPI_Isend`, the request will be processed internally so even if both of your processes are ready and willing to transmit the data, you never choose when the non-blockin communication is going to happen. Also note that what is depicted is really schematical to help you understand what is happening in the worst case.
+
 It is imperative to understand the semantic behind non-blocking communications in MPI. A non-blocking communication is an agreement both of your process are making, to avoid reading or writing the communication buffers before the request is fulfilled. The only way to make sure the request has been completed is to use `MPI_Wait` or `MPI_Test`. Only after can your processes use the communication buffers. Hence, a program using non-blocking sends or receives will always have to call `MPI_Wait` eventually before reading or writing to the comm-buffer.
 
 That also encourages your processes to separate the communication buffers from the data structures of your program.
+
+## Take-away point :
+
+`MPI_Isend` and `MPI_Irecv` **MUST** be followed at some point by `MPI_Test` and `MPI_Wait`. The process sending should never **write** in the buffer until the request has been completed. On the other hand, the process receiving should never **read** in the buffer before the request has been completed. And the only way to know if a request is completed, is to call `MPI_Wait` and `MPI_Test`.
+
+## Why bother then ?
+
+It might seem to be a hassle to use non-blocking communication. And unfortunately, correctly programming a non-blocking system is really harder than a blocking system. Aside from the difficulty to code such a system, the gain in speed compared to a non-blocking scenario will be really significant, if a non-blocking scenario can be used.
