@@ -63,7 +63,7 @@ int main(int argc, char **argv) {
 
     // Receiving buffer 2
     MPI_Recv(buff2, big_count, MPI_INT, 0, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-    std::cout << "Just received buffer 1" << std::endl;
+    std::cout << "Just received buffer 2" << std::endl;
   }
 
   MPI_Finalize();
