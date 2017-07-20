@@ -30,6 +30,7 @@ int main(int argc, char **argv) {
     buffer = new double[n_elements];
 
   // 2- Broadcast the buffer to every process
+  //    NOTE : The type here should be MPI_DOUBLE not MPI_FLOAT !
   // [...]
   
 
