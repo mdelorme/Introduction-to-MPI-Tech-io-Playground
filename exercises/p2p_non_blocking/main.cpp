@@ -3,14 +3,13 @@
 #include <mpi.h>
 
 int rank, size;
-constexpr int buffer_count = 10;
+constexpr int buffer_count = 100000;
 int buffer[buffer_count];
 
 void print_buffer(double time, int step, int *buffer, int n_elements) {
-  std::cout << "Synchronisation at " << time+MPI_Wtime() << "ms; At step " << step << "; Buffer = (";
   for (int i=0; i < n_elements; ++i)
-    std::cout << buffer[i] << (i==n_elements-1 ? ")" : " ");
-  std::cout << std::endl;
+    std::cerr << buffer[i] << " ";
+  std::cerr << std::endl;
 }
 
 #include "non_blocking.cpp"
