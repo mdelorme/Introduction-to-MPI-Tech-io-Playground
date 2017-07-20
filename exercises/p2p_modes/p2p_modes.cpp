@@ -30,10 +30,10 @@ int main(int argc, char **argv) {
     MPI_Barrier(MPI_COMM_WORLD);
 
     // We register the current time
-    float time = -MPI_Wtime();
+    double time = -MPI_Wtime();
 
     // We send the buffer immediately
-    MPI_Ssend(buff1, small_count, MPI_INT, 1, 0, MPI_COMM_WORLD);
+    MPI_Send(buff1, small_count, MPI_INT, 1, 0, MPI_COMM_WORLD);
 
     // We print the time it took us to complete this send
     std::cout << "Time elapsed to complete blocking send 1 : " << time + MPI_Wtime() << "s" << std::endl;
