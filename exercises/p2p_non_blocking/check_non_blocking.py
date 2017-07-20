@@ -22,7 +22,7 @@ if int(non_blocking) != 8:
 
 f_out = open('res.txt', 'r')
 l1 = f_out.readline().split()
-l1 = (int(x) for x in l1)
+l1 = list(int(x) for x in l1)
 if len(l1) != 100000:
     print('Error : printed buffer is smaller than supposed to !')
     print('TECHIO> success false')
@@ -35,7 +35,7 @@ for i, x in enumerate(l1):
         exit(0)
 
 l2 = f_out.readline().split()
-l2 = (int(x) for x in l2)
+l2 = list(int(x) for x in l2)
 if len(l2) != 100000:
     print('Error : printed buffer is smaller than supposed to !')
     print('TECHIO> success false')
