@@ -10,7 +10,7 @@ It is time to code something a bit fancier than just printing your rank id on th
 * Receive the integer of Process #1
 * Write the sum of the two values on `stdout`
 
-** Process #1**
+**Process #1**
 
 * Receive the integer of Process #0
 * Send your integer to Process #0
