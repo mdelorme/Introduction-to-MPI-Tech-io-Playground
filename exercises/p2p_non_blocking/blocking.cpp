@@ -2,7 +2,7 @@
 void play_blocking_scenario() {
   // Initialising buffer :
   for (int i=0; i < buffer_count; ++i)
-    buffer[i] = (rank == 0 ? i*i : 0);
+    buffer[i] = (rank == 0 ? i*2 : 0);
 
   MPI_Barrier(MPI_COMM_WORLD);
   // Starting the chronometer

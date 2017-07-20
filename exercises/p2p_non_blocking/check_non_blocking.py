@@ -24,12 +24,12 @@ f_out = open('res.txt', 'r')
 l1 = f_out.readline().split()
 l1 = list(int(x) for x in l1)
 if len(l1) != 100000:
-    print('Error : printed buffer is smaller than supposed to !')
+    print('Error : received buffer is smaller than supposed to !')
     print('TECHIO> success false')
     exit(0)
     
 for i, x in enumerate(l1):
-    if x != i*i:
+    if x != i*2:
         print('Error : On 1st buffer, Received element #{} should be {}. Received {}'.format(i, i*i, x))
         print('TECHIO> success false')
         exit(0)
@@ -37,7 +37,7 @@ for i, x in enumerate(l1):
 l2 = f_out.readline().split()
 l2 = list(int(x) for x in l2)
 if len(l2) != 100000:
-    print('Error : printed buffer is smaller than supposed to !')
+    print('Error : received buffer is smaller than supposed to !')
     print('TECHIO> success false')
     exit(0)
     

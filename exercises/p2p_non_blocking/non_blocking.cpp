@@ -5,7 +5,7 @@ void play_non_blocking_scenario() {
 
   // Initialising buffer :
   for (int i=0; i < buffer_count; ++i)
-    buffer[i] = (rank == 0 ? i*i : 0);
+    buffer[i] = (rank == 0 ? i*2 : 0);
 
   // Starting the chronometer
   double time = -MPI_Wtime(); // This command helps us measure time. We will see more about it later on !
@@ -64,7 +64,7 @@ void play_non_blocking_scenario() {
     // 8- Wait here for the request to be completed
     // [...]
 
-    print_buffer(buffer);
+    print_buffer();
     
     // Work for 3 seconds
     sleep(3);
@@ -75,7 +75,7 @@ void play_non_blocking_scenario() {
     // 10- Wait for it to be completed
     // [...]
 
-    print_buffer(buffer);
+    print_buffer();
   }
   ////////// should not modify anything AFTER this point //////////
 
