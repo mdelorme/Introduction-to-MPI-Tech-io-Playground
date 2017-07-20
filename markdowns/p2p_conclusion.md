@@ -11,7 +11,7 @@ In the next chapter, we will talk about collective communications, when you want
 -[X] MPI_COMM_WORLD
 -[ ] MPI_COMM_DEF
 
-?[Which of these situations is/are a race condition ?]
+?[Which of these situations is/are a race condition ?](multiple)
 -[ ] When the send buffer is not filled fast enough for the receive to be completed properly.
 -[ ] When there is a large difference in sending time between two processes with the same buffers.
 -[X] When the sending process modifies its buffer before the receiving process has read from it.
@@ -32,7 +32,7 @@ In the next chapter, we will talk about collective communications, when you want
 -[X] True
 -[ ] False
 
-?[What can we use probing for ?]
+?[What can we use probing for ?](multiple)
 -[X] To know if a message is waiting to be delivered to a process
 -[X] To know the tag of an incoming message
 -[X] To know the id of the process sending a message
