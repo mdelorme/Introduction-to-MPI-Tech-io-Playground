@@ -63,6 +63,8 @@ void play_non_blocking_scenario() {
 
     // 8- Wait here for the request to be completed
     // [...]
+
+    print_buffer(buffer);
     
     // Work for 3 seconds
     sleep(3);
@@ -72,6 +74,8 @@ void play_non_blocking_scenario() {
     
     // 10- Wait for it to be completed
     // [...]
+
+    print_buffer(buffer);
   }
   ////////// should not modify anything AFTER this point //////////
 

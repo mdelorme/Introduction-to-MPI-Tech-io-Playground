@@ -3,7 +3,7 @@
 echo -e "Compiling"
 cd p2p_non_blocking
 rm -rf b_vs_nb
-mpicxx -std=c++11 -o b_vs_nb main.cpp 2> err_log
+mpicxx -std=c++11 -O0 -o b_vs_nb main.cpp 2> err_log
 
 rc=$?
 if [[ $rc != 0 ]]; then
@@ -17,9 +17,8 @@ fi
 echo "Compilation is OK"
 echo -e "Execution ... "
 
-mpirun -mca btl sm,tcp,self -np 2 ./b_vs_nb | tee out.txt
-#python check_non_blocking.py
-cat out.txt
+mpirun -mca btl tcp,self -np 2 ./b_vs_nb 2> res.txt | tee out.txt
+python check_non_blocking.py
 rm -rf b_vs_nb
 
 
