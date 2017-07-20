@@ -6,8 +6,8 @@ int rank, size;
 constexpr int buffer_count = 100000;
 int buffer[buffer_count];
 
-void print_buffer(double time, int step, int *buffer, int n_elements) {
-  for (int i=0; i < n_elements; ++i)
+void print_buffer() {
+  for (int i=0; i < buffer_count; ++i)
     std::cerr << buffer[i] << " ";
   std::cerr << std::endl;
 }
