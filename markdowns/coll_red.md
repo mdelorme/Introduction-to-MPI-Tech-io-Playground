@@ -39,17 +39,6 @@ Now, everything should be pretty obvious when each process is dealing with a sin
 
 The answer is : the operations are computed **element-wise**. So if you apply `MPI_MAX`, `MPI_MIN` or `MPI_SUM` on a buffer with five elements in a five-processes program, you will get five values as result :
 
-Process   | $`v_1`$ | $`v_2`$ | $`v_3`$ | $`v_4`$ | $`v_5`$ 
-----------|---------|---------|---------|---------|--------
-0         | 4.0     | 12.0    | -1.0    | 7.2     | -23.0
-1         | 0.0     | 0.0     | 0.0     | 0.0     | 0.0
-2         | -1.0    | 2.0     | -3.0    | 4.0     | -5.0
-3         | 7.3     | -5.0    | -12.0   | -3.2    | 1.23
-4         | -1.0    | -1.0    | -1.0    | -1.0    | -1.0
-----------|---------|---------|---------|---------|--------
-`MPI_MIN` | -1.0    | -5.0    | -12.0   | -3.2    | -23.0
-`MPI_MAX` | 7.3     | 12.0    | 0.0     | 7.2     | 1.23
-`MPI_SUM` | 9.3     | 8.0     | -17.0   | 7.0     | -27.77
 
 ## Reducing on all processes
 
