@@ -19,7 +19,3 @@ That also encourages your processes to separate the communication buffers from t
 ## Take-away point :
 
 `MPI_Isend` and `MPI_Irecv` **MUST** be followed at some point by `MPI_Test` and `MPI_Wait`. The process sending should never **write** in the buffer until the request has been completed. On the other hand, the process receiving should never **read** in the buffer before the request has been completed. And the only way to know if a request is completed, is to call `MPI_Wait` and `MPI_Test`.
-
-## Why bother then ?
-
-It might seem to be a hassle to use non-blocking communication. And unfortunately, correctly programming a non-blocking system is really harder than a blocking system. Aside from the difficulty to code such a system, the gain in speed compared to a non-blocking scenario will be really significant, if a non-blocking scenario can be used.
