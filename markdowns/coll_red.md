@@ -3,7 +3,9 @@
 Reductions are among the most useful MPI operations you can use. Reductions are basically a very simple operation that will be applied on all the buffers the processes. The operation can be either user-specified (we will not cover this here) or from the list of pre-defined operations. Usually, the predefined operations are largely sufficient for any application. Let's take, once again, a very simple (and very inefficient) example. Consider a system where you have $`N`$ processes. The goal of the game is to compute the dot product of two $`N`$-vectors in parallel. Now the dot product of two vectors $`\mathbf{u}`$ and $`\mathbf{v}`$, for those who forgot, is the following operation :
 
 ```math
+
 \mathbf{u} \dot \mathbf{v} = u_1v_1 + u_2v_2 + ... + u_Nv_N
+
 ```
 
 As you can imagine, this is highly parallelizable. If you have $`N`$ processes, each process $`i`$ can compute the intermediate value $`u_i \times v_i`$. Then, the program needs to find a way to sum all of these values. This is where the reduction comes into play. We can ask MPI to sum all those value and store them either on only one process (for instance process 0) or to redistribute the value to every process. Here is how we would do it in C++ :
