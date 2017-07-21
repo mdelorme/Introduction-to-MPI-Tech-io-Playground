@@ -7,10 +7,11 @@ void play_non_blocking_scenario() {
   for (int i=0; i < buffer_count; ++i)
     buffer[i] = (rank == 0 ? i*2 : 0);
 
+  MPI_Barrier(MPI_COMM_WORLD);
   // Starting the chronometer
   double time = -MPI_Wtime(); // This command helps us measure time. We will see more about it later on !
 
-
+  
   ////////// You should not modify anything BEFORE this point //////////
   
   if (rank == 0) {
