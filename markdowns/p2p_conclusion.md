@@ -44,3 +44,8 @@ In the next chapter, we will talk about collective communications, when you want
 -[X] `MPI_Wait`
 -[ ] `MPI_Probe`
 
+?[What command should be used to synchronise all the processes on a communicator ?]
+-[ ] `MPI_Wait`
+-[ ] `MPI_Sync`
+-[X] `MPI_Barrier`
+-[ ] `MPI_Synchronize`
