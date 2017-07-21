@@ -108,6 +108,10 @@ else {
 
 Finally there is one last thing you need to know : It is possible to match non-blocking and blocking communications. For instance, you can have a `MPI_Isend` on one process being retrieved by a `MPI_Recv` on another process. Nothing prevents you from doing that !
 
+## `MPI_Barrier`
+
+You might have noticed the presence of the command `MPI_Barrier` in the code. This command forces all the processes in a certain communicator (`MPI_COMM_WORLD` in this case) to wait for each other. So the processes in the communicator are going to pause until every single one has reached a barrier (not necessarily the same one). Then, execution resumes. This is a way of hard synchronising the different processes.
+
 ## Exercise
 
 You are finally ready to code this exercise. Remember the algorithm is at the top of the lesson so feel free to refer to that. Be careful when using `MPI_Test` to always add a `MPI_Wait` in case the request has not been completing even though your work is finished.
@@ -117,5 +121,6 @@ In the exercise you are provided with two files : `blocking.cpp` that describes 
 **Important** : This exercise is one of the most difficult of this course. Take your time, and think everything through. Don't hesitate to test every intermediate steps. Buffers are printed at each step to make sure that you are receiving the correct data. The blocking version will give you the values of the buffers you are supposed to expect.
 
 At the end, if you have succeeded, the buffers should have the same values as for the blocking version, but the execution time should be smaller.
+
 
 @[Non blocking communications]({"stubs": ["p2p_non_blocking/non_blocking.cpp", "p2p_non_blocking/blocking.cpp"], "command": "bash p2p_non_blocking/non_blocking.sh", "layout": "aside"})
