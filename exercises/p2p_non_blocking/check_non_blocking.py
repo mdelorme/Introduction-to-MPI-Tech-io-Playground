@@ -30,7 +30,7 @@ if len(l1) != 100000:
     
 for i, x in enumerate(l1):
     if x != i*2:
-        print('Error : On 1st buffer, Received element #{} should be {}. Received {}'.format(i, i*i, x))
+        print('Error : On 1st buffer, Received element #{} should be {}. Received {}'.format(i, i*2, x))
         print('TECHIO> success false')
         exit(0)
 
@@ -43,7 +43,7 @@ if len(l2) != 100000:
     
 for i, x in enumerate(l2):
     if x != -i:
-        print('Error : On 2nd buffer, Received element #{} should be {}. Received {}'.format(i, i*i, x))
+        print('Error : On 2nd buffer, Received element #{} should be {}. Received {}'.format(i, i*2, x))
         print('TECHIO> success false')
         exit(0)
 
