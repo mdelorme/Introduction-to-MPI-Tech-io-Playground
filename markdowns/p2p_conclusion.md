@@ -39,13 +39,13 @@ In the next chapter, we will talk about collective communications, when you want
 -[X] To know the number of elements in an incoming message
 
 ?[In non-blocking communications, which function must necessarily be called at some point after a receive or a send ?]
--[ ] `MPI_Test`
--[ ] `MPI_Barrier`
--[X] `MPI_Wait`
--[ ] `MPI_Probe`
+-[ ] MPI_Test
+-[ ] MPI_Barrier
+-[X] MPI_Wait
+-[ ] MPI_Probe
 
 ?[What command should be used to synchronise all the processes on a communicator ?]
--[ ] `MPI_Wait`
--[ ] `MPI_Sync`
--[X] `MPI_Barrier`
--[ ] `MPI_Synchronize`
+-[ ] MPI_Wait
+-[ ] MPI_Sync
+-[X] MPI_Barrier
+-[ ] MPI_Synchronize
