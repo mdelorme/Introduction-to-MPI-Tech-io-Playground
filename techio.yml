@@ -28,7 +28,7 @@ plan:
       - title: Probing an incoming communication
         statement: markdowns/p2p_probing.md
       - title: Probing - exercise
-        statement: markdowns/p2p_ex3.md
+        statement: markdowns/p2p_probing_ex.md
       - title: Communication modes
         statement: markdowns/p2p_modes.md
       - title: Point-to-point communications - conclusion
