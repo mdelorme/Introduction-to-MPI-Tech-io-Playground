@@ -11,6 +11,8 @@ for i, line in enumerate(f_in):
     if i == 5:
         if line == 'TECHIO> success false':
             print('Error : The count is wrong !')
+        else:
+            print('Final count is OK !')
         print(line)
         exit(0)
             
