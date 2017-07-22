@@ -9,12 +9,12 @@ int main(int argc, char **argv) {
   MPI_Comm_size(MPI_COMM_WORLD, &size);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-  constexpr int buffer_count = 1000;
+  constexpr int buffer_count = 5000;
   float buffer[buffer_count];
   memset(buffer, 0, sizeof(buffer));
   
   // Uniform sampling
-  for (int rep=0; rep < 10000; ++rep) {
+  for (int rep=0; rep < 1000; ++rep) {
     for (int i=0; i < buffer_count; ++i) {
       float val = (float)rand() / RAND_MAX;
       buffer[i] += val;

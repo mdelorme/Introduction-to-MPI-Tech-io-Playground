@@ -16,7 +16,7 @@ fi
 echo "Compilation is OK"
 echo -e "Execution ... "
 
-mpirun -mca btl tcp,self -np 5 ./clt > norm
+mpirun -mca btl tcp,self -np 100 ./clt > norm
 python check_clt.py
 rm -rf clt
 
