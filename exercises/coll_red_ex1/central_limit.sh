@@ -2,8 +2,8 @@
 
 echo -e "Compiling"
 cd coll_red_ex1
-rm -rf central_limit
-mpicxx -std=c++11 -O0 -o central_limit central_limit.cpp 2> err_log
+rm -rf clt
+mpicxx -std=c++11 -O0 -o clt central_limit.cpp 2> err_log
 
 rc=$?
 if [[ $rc != 0 ]]; then
@@ -16,7 +16,8 @@ fi
 echo "Compilation is OK"
 echo -e "Execution ... "
 
-mpirun -mca btl tcp,self -np 100 ./central_limit
-rm -rf central_limit
+mpirun -mca btl tcp,self -np 5 ./clt > norm
+python check_clt.py
+rm -rf clt
 
 
