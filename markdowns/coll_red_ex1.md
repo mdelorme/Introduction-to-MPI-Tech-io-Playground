@@ -20,5 +20,5 @@ Remember that the root is the process on which the reduction result will be stor
 
 Your turn to play :
 
-@[Central limit theorem]({"stubs": ["coll_red_ex1/central_limit.cpp"], "command": "bash coll_red_ex1/central_limit.sh"})
+@[Central limit theorem]({"stubs": ["coll_red_ex1/central_limit.cpp"], "command": "bash coll_red_ex1/central_limit.sh", "layout": "aside"})
 
