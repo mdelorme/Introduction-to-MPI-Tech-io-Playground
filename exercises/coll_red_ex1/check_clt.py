@@ -18,19 +18,20 @@ plt.subplot(212)
 plt.hist(norm, bins=50)
 plt.title('Summed distribution')
 plt.savefig('histograms.png')
-print('TECHIO> open /project/target/exercises/coll_red_ex1/histograms.png')
+print('TECHIO> open --static-dir /project/target/exercises/coll_red_ex1/histograms.png')
 
 print('Computing Shapiro test')
 print(' H0 : The distribution follows a Normal distribution')
 s1 = shapiro(uni)
 s2 = shapiro(norm)
-print('  p-value for the uniform distribution : {:.5}'.format(s1[1]))
+print('')
+print(' p-value for the uniform distribution : {:.5}'.format(s1[1]))
 if (s1[1] > 0.05):
     print('  -> p > 5%; H0 is not rejected : the distribution does not diverges from a normal distribution')
 else:
     print('  -> p >= 5%; H0 is rejected : the distribution diverges from a normal distribution')
 
-print('  p-value for the summed distribution : {:.5}'.format(s2[1]))
+print(' p-value for the summed distribution : {:.5}'.format(s2[1]))
 if (s2[1] > 0.05):
     print('  -> p > 5%; H0 is not rejected : the distribution does not diverges from a normal distribution')
     print('  => OK')
