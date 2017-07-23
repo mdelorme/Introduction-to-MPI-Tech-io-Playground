@@ -29,7 +29,7 @@ print(' p-value for the uniform distribution : {:.5}'.format(s1[1]))
 if (s1[1] > 0.05):
     print('  -> p > 5%; H0 is not rejected : the distribution does not diverges from a normal distribution')
 else:
-    print('  -> p >= 5%; H0 is rejected : the distribution diverges from a normal distribution')
+    print('  -> p <= 5%; H0 is rejected : the distribution diverges from a normal distribution')
 
 print(' p-value for the summed distribution : {:.5}'.format(s2[1]))
 if (s2[1] > 0.05):
@@ -37,6 +37,6 @@ if (s2[1] > 0.05):
     print('  => OK')
     print('TECHIO> success true')
 else:
-    print('  -> p >= 5%; H0 is rejected : the distribution diverges from a normal distribution')
+    print('  -> p <= 5%; H0 is rejected : the distribution diverges from a normal distribution')
     print('  => ERROR !')
     print('TECHIO> success false')
