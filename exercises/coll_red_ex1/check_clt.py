@@ -10,7 +10,7 @@ print('Generating a random uniform law')
 uni   = np.random.rand(5000)
 
 print('Generating plots')
-plt.figure((8, 8))
+plt.figure(figsize=(8, 8))
 plt.subplot(211)
 plt.hist(uni, bins=50)
 plt.title('Uniform distribution')
