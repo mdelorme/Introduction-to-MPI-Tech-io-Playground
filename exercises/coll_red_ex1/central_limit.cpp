@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
   float buffer[buffer_count];
   memset(buffer, 0, sizeof(buffer));
   
-  // Uniform sampling
+  // Uniform sampling, generating the numbers and doing 1000 repetitions
   for (int rep=0; rep < 1000; ++rep) {
     for (int i=0; i < buffer_count; ++i) {
       float val = (float)rand() / RAND_MAX;
@@ -21,9 +21,11 @@ int main(int argc, char **argv) {
     }
   }
 
-  float reception[buffer_count];
-  MPI_Reduce(&buffer, &reception, buffer_count, MPI_FLOAT, MPI_SUM, 0, MPI_COMM_WORLD);
+  // TODO : create a buffer and call MPI_Reduce to sum all the variables
+  // over all the processes and store the result on process 0.
+  // In the end, you should have buffer_count variables.
 
+  // Now we print the results
   if (rank == 0) {
     for (int i=0; i < buffer_count; ++i)
       std::cout << reception[i] << std::endl;
