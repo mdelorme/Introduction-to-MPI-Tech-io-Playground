@@ -13,7 +13,7 @@ Consider the following problem. We have a list of $`N`$ points in three dimensio
 
 As stated in the lesson, `MPI_Allreduce` computes a reduction just like `MPI_Reduce` but instead of storing the result on only one process, the result will be sent back to every process. The prototype is the following :
 
-`cpp
+```cpp
 int MPI_Allreduce(void *sendbuf, void *recvbuf, int count, MPI_Datatype datatype, MPI_Op op, MPI_Comm comm);
 ```
 
