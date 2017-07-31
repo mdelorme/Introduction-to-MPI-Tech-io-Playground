@@ -17,7 +17,7 @@ echo "Compilation is OK"
 echo -e "Execution ... "
 
 mpirun -mca btl tcp,self -np 10 ./barycentre < input.txt | sort -n > norm
-diff norm out.txt
+diff norm out.txt > log
 rc=$?
 if [[ $rc != 0 ]]; then
     echo -e "Error : output is wrong !"
@@ -27,5 +27,6 @@ if [[ $rc != 0 ]]; then
 fi
 rm -rf clt
 
+echo "The computed distances are correct ! Congratulations !"
 echo "TECHIO> success true"
 
