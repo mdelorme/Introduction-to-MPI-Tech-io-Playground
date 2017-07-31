@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
     }
   }
 
-  // TODO : create a buffer and call MPI_Reduce to sum all the variables
+  // TODO : create a buffer called reception and call MPI_Reduce to sum all the variables
   // over all the processes and store the result on process 0.
   // In the end, you should have buffer_count variables.
 
