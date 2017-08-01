@@ -18,7 +18,7 @@ plt.subplot(212)
 plt.hist(norm, bins=50, ls='solid', lw=1)
 plt.title('Summed distribution')
 plt.savefig('histograms.png')
-print('TECHIO> open --static-dir /project/target/coll_red_ex1 index.html')
+print('TECHIO> open --static-dir /project/target/coll_red_ex1 histograms.png')
 
 print('Computing Shapiro test')
 print(' H0 : The distribution follows a Normal distribution')
