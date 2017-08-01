@@ -88,25 +88,11 @@ plan:
       - title: Scalability - conclusion
         statement: markdowns/scal_conclusion.md
 
-  - title: Additional information
-    description: This chapters gives additional information that has been left over
+  - title: Conclusion
+    description: Conclusion chapter
     plan:
-      - title: Derived types
-        statement: markdowns/misc_types.md
-      - title: Derived types - exercise
-        statement: markdowns/misc_types_ex.md
-      - title: Error handling
-        statement: markdowns/misc_err.md
-      - title: Error handling - exercise
-        statement: markdowns/misc_err_ex.md
-      - title: What to expect from MPI-2 ?
-        statement: markdowns/misc_mpi_2.md
-      - title: What to expect from MPI-3 ?
-        statement: markdowns/misc_mpi_3.md
-      - title: What has been left over ?
-        statement: markdowns/misc_left_over.md
-      - title: Conclusion and references
-        statement: markdowns/misc_conclusion.md
+      - title: Conclusion
+        statement: markdowns/conclusion.md
 projects:
   main:
     root: exercises/

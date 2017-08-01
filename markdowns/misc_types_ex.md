@@ -1,1 +1,0 @@
-# Derived types - exercise
