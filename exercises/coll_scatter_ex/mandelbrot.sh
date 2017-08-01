@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "Compiling"
-cd mandelbrot
+cd coll_scatter_ex
 rm -rf mandelbrot
 mpicxx -std=c++11 -O3 -o mandelbrot mandelbrot.cpp 2> err_log
 
