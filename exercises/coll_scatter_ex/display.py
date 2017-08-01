@@ -2,6 +2,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 d1 = np.loadtxt('ex1')
 d2 = np.loadtxt('ex2')
@@ -23,5 +24,6 @@ plt.imshow(d3, extent=[-1.45, -1.35, -0.05, 0.05])
 plt.subplot(224)
 plt.imshow(d4, extent=[-1.30, -1.15, 0.25, 0.40])
 plt.savefig('mandelbrot.png')
+print(os.listdir('.'))
 print('TECHIO> open --static-dir /project/target/coll_scatter_ex mandelbrot.png')
 print('TECHIO> success true')
