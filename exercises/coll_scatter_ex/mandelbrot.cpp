@@ -8,7 +8,7 @@ int rank, size;
 
 // Number of points on one side. The total number of points
 // will be p_count*p_count.
-constexpr int p_count = 1024;
+constexpr int p_count = 512;
 
 // Other global variables. We read them from the command line
 // this will be handled by the script running on tech.io, don't
