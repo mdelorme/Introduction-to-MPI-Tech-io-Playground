@@ -29,7 +29,7 @@ Once we have computed this for every point, we plot, for each couple (x,y) the v
 
 If we take every point on $`x \in [-2.0, 1.0]`$ and $`y \in [-1.5, 1.5]`$ and `max_iteration=50`, we get the following image :
 
-[Mandelbrot set](/img/mandelbrot.png "The whole Mandelbrot set")
+![Mandelbrot set](/img/mandelbrot.png "The whole Mandelbrot set")
 
 ## Statement
 
