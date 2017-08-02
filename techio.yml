@@ -56,7 +56,7 @@ plan:
       - title: Collective communications - conclusion
         statement: markdowns/coll_conclusion.md
 
-  - title: Custom communicators and groups
+  - title: Communicators and topologies
     description: This chapters goes over the creation of custom communicators
     plan:
       - title: Introduction to communicators
