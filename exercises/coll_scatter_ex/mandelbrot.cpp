@@ -4,7 +4,7 @@
 
 int rank, size;
 
-constexpr int p_count = 512;
+constexpr int p_count = 512; // Number of points on one side
 int cutoff;
 double min_x, max_x, min_y, max_y, dx, dy;
 
@@ -68,20 +68,19 @@ int main(int argc, char **argv) {
     return 0;
   }
   
-  double *points = NULL;;
-  int side_length = sqrt(size) * p_count;
+  double *points = NULL;
 
   MPI_Barrier(MPI_COMM_WORLD);
   
   if (rank==0) {
-    points = new double[p_count * p_count * size * 2];
+    points = new double[p_count * p_count * 2];
     // Initialising the points to plot
-    for (int yp=0; yp < side_length; ++yp) {
-      double py = min_y + dy * yp / side_length;
-      for (int xp=0; xp < side_length; ++xp) {
-	double px = min_x + dx * xp / side_length;
+    for (int yp=0; yp < p_count; ++yp) {
+      double py = min_y + dy * yp / p_count;
+      for (int xp=0; xp < p_count; ++xp) {
+	double px = min_x + dx * xp / p_count;
 
-	int lid = yp*side_length*2 + xp*2;
+	int lid = yp*p_count*2 + xp*2;
 	points[lid]   = px;
 	points[lid+1] = py;
       }
@@ -91,7 +90,7 @@ int main(int argc, char **argv) {
   MPI_Barrier(MPI_COMM_WORLD);
 
   // Distributing the points over processes
-  constexpr int npts = p_count*p_count;
+  int npts = p_count*p_count/size;
   double my_points[npts*2];
   MPI_Scatter(points, npts*2, MPI_DOUBLE, my_points, npts*2, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
@@ -111,9 +110,9 @@ int main(int argc, char **argv) {
   MPI_Gather(mset, npts, MPI_INT, mset_tot, npts, MPI_INT, 0, MPI_COMM_WORLD);
   
   if (rank == 0) {
-    for (int yp=0; yp < side_length; ++yp) {
-      for (int xp=0; xp < side_length; ++xp) {
-	std::cout << mset_tot[yp*side_length + xp] << " ";
+    for (int yp=0; yp < p_count; ++yp) {
+      for (int xp=0; xp < p_count; ++xp) {
+	std::cout << mset_tot[yp*p_count + xp] << " ";
       }
       std::cout << std::endl;
     }
