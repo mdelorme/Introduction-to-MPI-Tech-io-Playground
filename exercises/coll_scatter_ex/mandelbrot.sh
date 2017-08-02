@@ -15,7 +15,7 @@ if [[ $rc != 0 ]]; then
 fi
 echo "Compilation is OK"
 
-NP=4
+NP=16
 
 echo -e "Running example 1 ... "
 mpirun -mca btl tcp,sm,self -np $NP ./mandelbrot -2.0 1.0 -1.5 1.5 50 > ex1
