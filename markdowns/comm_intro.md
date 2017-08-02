@@ -1,4 +1,4 @@
-# Custom communicators and groups
+# Communicators : Introduction
 
 In this chapter we are going to talk about communicators. Communicators are a complex subject in MPI and the standard documentation of MPI dedicates a full chapter to them and to related concepts. In this course, we will only see the basics of custom communicators, mainly what they are and how to create them easily. We will also see a way to create a cartesian topology, which is one of the most common topologies to communicate for grid based codes.
 
