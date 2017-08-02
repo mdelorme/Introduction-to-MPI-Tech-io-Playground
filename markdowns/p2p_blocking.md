@@ -34,7 +34,7 @@ C Type | MPI Type
 `float` | `MPI_FLOAT`
 `double` | `MPI_DOUBLE`
 
-There are lots of other types, that you can find in the official [MPI standard documentation](http://mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf). We will see later that it is also possible to create your own custom datatypes.
+There are lots of other types, that you can find in the official [MPI standard documentation](http://mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf). It is also possible to create your own datatypes but we won't see how in this course.
 
 **A number of elements**
 
