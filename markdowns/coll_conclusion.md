@@ -15,8 +15,7 @@ But for now, let's test your knowledge of collective communications to see if yo
 -[X] Yes
 -[ ] No
 
-?[Why is there two different parameters to MPI_Scatt
-er for sending count and receiving count ?]
+?[Why is there two different parameters to MPI_Scatter for sending count and receiving count ?]
 -[ ] To allow the sending different amounts of data to different processes.
 -[ ] They are a redundancy and should always be the same.
 -[X] To account for different data types.
