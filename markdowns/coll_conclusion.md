@@ -2,7 +2,7 @@
 
 We have now finished to see the basics of collective communications ! The next chapter concentrates on communicators. By now you should already be able to craft advanced MPI programs with non-blocking communications, reductions, scattering, gathering or broadcasting.
 
-There are a few things we have not seen in terms of collective communications such as [All to all](https://www.open-mpi.org/doc/v2.0/man3/MPI_Alltoall.3.php) communications or composite operations such as Reduce-gather operations. These operations might be the subject of a future tech-io playground on advanced MPI, but they are not really the subject of an introduction course.
+There are a few things we have not seen in terms of collective communications such as [All to all](https://www.open-mpi.org/doc/v2.0/man3/MPI_Alltoall.3.php) communications or composite operations such as Reduce-scatter operations. These operations might be the subject of a future tech-io playground on advanced MPI, but they are not really the subject of an introduction course.
 
 But for now, let's test your knowledge of collective communications to see if you have understood everything :
 
