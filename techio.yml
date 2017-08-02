@@ -59,7 +59,7 @@ plan:
   - title: Custom communicators and groups
     description: This chapters goes over the creation of custom communicators
     plan:
-      - title: Introduction
+      - title: Introduction to communicators
         statement: markdowns/comm_intro.md
       - title: Splitting
         statement: markdowns/comm_splitting.md
