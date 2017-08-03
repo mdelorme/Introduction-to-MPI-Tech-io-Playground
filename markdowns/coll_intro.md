@@ -20,7 +20,6 @@ Collective communications allow us to exchange more easily information across al
 * **Reduction** : One process gets data from all the other processes and applies an operation on it (sum, minimum, maximum, etc.
 * **Scatter** : A single process partitions the data to send pieces to every other process
 * **Gather**  : A single process assembles the data from different process in a buffer
-* **All to all** : Every process sends data to every other process.
 
 ## Blocking or non-blocking ?
 
