@@ -1,6 +1,8 @@
 # Communicators : Introduction
 
-In this chapter we are going to talk about communicators. Communicators are a complex subject in MPI and the standard documentation of MPI dedicates a full chapter to them and to related concepts. In this course, we will only see the basics of custom communicators, mainly what they are and how to create them easily. We will also see a way to create a cartesian topology, which is one of the most common topologies to communicate for grid based codes.
+As you might remember from the introduction, it is possible to create your own communicators in MPI. That's what we are going to see in this chapter. Now communicators are a complex subject in MPI and the standard documentation of MPI dedicates a full chapter to them and to related concepts, so bear in mind that we will only be scratching the surface of a very complex and advanced topic.
+
+In this course, we will only see the basics of custom communicators, mainly what they are and how to create them. We will also see what topologies are and how we can benefit from them.
 
 ## Definitions
 
@@ -10,7 +12,9 @@ There are a lot of levels of subtlety in communicators in MPI and if you are int
 * **Context** : A context can be seen as a tag that provides a safe-space for communication. This "tag" labels the communication and links it to its context, providing additional semantics.
 * **Intra-communicator** : An intra-communicator is the reunion of a group and a context. Until now, we have been using `MPI_COMM_WORLD` as a communicator. `MPI_COMM_WORLD` is an intra-communicator.
 
-Now you understand that a communicator limits its communications to a specific group of processes. But we can also define the notion of **inter-communicators** that allow to pass message between two non-overlapping groups. An inter-communicator is the reunion of TWO groups and a context.
+Now you understand that a communicator limits its communications to a specific group of processes but not only : if you have two communicators on the same group, their context will be different and the messages that will be sent will be virtually separated from each other.
+
+Aside from intra-communicators we can also define the notion of **inter-communicators** that allow to pass message between two non-overlapping groups. An inter-communicator is the reunion of TWO groups and a context.
 
 Finally, there is one last concept that we need to define : a **topology** is a way to provide a mapping between a specified disposition of processes and their actual ranks. The most classical example is the cartesian topology where instead of addressing a process by its rank, we will address it by a coordinate in a grid. We will see more about topology in a short while !
 
@@ -22,5 +26,15 @@ As for the rest, we will now be vague and get back to calling intra-communicator
 
 This chapter will be pretty short. In the next lesson we will see how to create and split communicators followed by an exercise. Then, in the following lesson we will learn about cartesian topologies and apply them to an exercise.
 
+## But why would I want to use other communicators?
 
+That a totally legitimate question to ask and there are multiple answers to that but the most straightforward one has to do with what is called [Flynn's taxonomy](https://en.wikipedia.org/wiki/Flynn%27s_taxonomy). Under this very simple taxonomy, you can divide any program in four categories.
+
+Sequential (non-parallel) programs are usually **SISD** programs : Single Instruction, Single Data. Note that, SISD is never used anywhere, the term sequential is preferred.
+
+Until now most of what we have been aiming for in the parallel course is what we call **SIMD** : Single Instruction Multiple Data. Basically, we have a bunch of data and we want to apply the same treatment to all of them.
+
+**MISD** means Multiple Instruction, Single Data. It basically means that you have different programs exploiting the same set of data. These programs can be parallelised in which case you will have a dedicated communicator for each program, and then a communicator between the two processes.
+
+The final paradigm : **MIMD** for Multiple Instruction, Multiple Data is exactly the same as MISD but on top of that, the different programs will be working on different sets of data.
 
