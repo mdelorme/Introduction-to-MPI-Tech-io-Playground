@@ -16,7 +16,12 @@ The basic broadcasting function in MPI is `MPI_Bcast`, which is defined as follo
 int MPI_Bcast(void* buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm);
 ```
 
-We will see in the next exercise that there is a non-blocking version of this function. All parameters to the function should be pretty obvious now. `root` is the id of the process sending the data, all other processes will be receivers and, as such, the values in `buffer` will be overwritten.
+There is also a non-blocking version that works as the non-blocking p2p communications (and that should be followed by `MPI_Test` and `MPI_Wait`)
+
+```cpp
+int MPI_Ibcast(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm, MPI_Request *request)
+```
+All parameters to these functions should be pretty obvious now. `root` is the id of the process sending the data, all other processes will be receivers and, as such, the values in `buffer` will be overwritten.
 
 @[Broadcasting, exercise 1]({"stubs": ["coll_bcast_ex1/bcast.cpp"], "command": "bash coll_bcast_ex1/bcast.sh", "layout": "aside"})
 
