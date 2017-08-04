@@ -8,7 +8,7 @@ In this course, we will only see the basics of custom communicators, mainly what
 
 There are a lot of levels of subtlety in communicators in MPI and if you are interested in the full detail, I would advise you to read the specifications in the [standard](http://mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf). Without entering too much into details, here are a few terms that are needed to understand what communicators are :
 
-* **Group** : A group is an ordered collection of process. These process are ordered via their **rank**.
+* **Group** : A group is an ordered collection of process. These processes are ordered via their **rank**.
 * **Context** : A context can be seen as a tag that provides a safe-space for communication. This "tag" labels the communication and links it to its context, providing additional semantics.
 * **Intra-communicator** : An intra-communicator is the reunion of a group and a context. Until now, we have been using `MPI_COMM_WORLD` as a communicator. `MPI_COMM_WORLD` is an intra-communicator.
 
