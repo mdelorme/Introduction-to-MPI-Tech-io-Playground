@@ -10,7 +10,7 @@ There are a lot of levels of subtlety in communicators in MPI and if you are int
 
 * **Group** : A group is an ordered collection of process. These processes are ordered via their **rank**.
 * **Context** : A context can be seen as a tag that provides a safe-space for communication. This "tag" labels the communication and links it to its context, providing additional semantics.
-* **Intra-communicator** : An intra-communicator is the reunion of a group and a context. Until now, we have been using `MPI_COMM_WORLD` as a communicator. `MPI_COMM_WORLD` is an intra-communicator.
+* **Intra-communicator** : An intra-communicator is the reunion of a group and a context. Until now, we have been using `MPI_COMM_WORLD` as a communicator : it actually is an intra-communicator.
 
 Now you understand that a communicator limits its communications to a specific group of processes but not only : if you have two communicators on the same group, their context will be different and the messages that will be sent will be virtually separated from each other.
 
@@ -22,7 +22,7 @@ Finally, there is one last concept that we need to define : a **topology** is a 
 
 In the following lessons, we won't be talking anymore about inter-communicators. These communicators can be important, but they don't belong in an introduction course. If you are really interested in reading about them, you will find more information in the MPI standard, as well as a brief example [here](http://mpi-forum.org/docs/mpi-1.1/mpi-11-html/node114.html).
 
-As for the rest, we will now be vague and get back to calling intra-communicators by simply communicators. Please bear in mind though that, everytime there is a mention to a communicator in MPI, it can be either intra or inter communicators.
+As for the rest, we will now be vague and get back to calling intra-communicators by simply communicators. Please bear in mind though that everytime there is a mention to a communicator in MPI, it can be either intra or inter communicators.
 
 This chapter will be pretty short. In the next lesson we will see how to create and split communicators followed by an exercise. Then, in the following lesson we will learn about cartesian topologies and apply them to an exercise.
 
