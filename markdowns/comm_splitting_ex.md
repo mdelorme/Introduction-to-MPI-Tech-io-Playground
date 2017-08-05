@@ -28,4 +28,6 @@ You are right ! Process 7 in the first split, and processes 1, 2, 3, 5, 6, 7 in 
 
 It's your turn to play. Note that, there are multiple ways of doing this properly. For this exercise, try to have only two calls to MPI_Comm_split in total in your code.
 
+Your splitting is going to be validated with various broadcasts on the new communicators. If a problem arises, MPI will crash and give a message on the command line indicating the problem. If the crash message indicates that something is wrong with `MPI_Bcast` that might indicate that the processes have been assigned to the wrong communicators.
+
 @[Splitting communicators]({"stubs": ["comm_splitting_ex/splitting.cpp"], "command": "bash comm_splitting_ex/splitting.sh", "layout": "aside"})
