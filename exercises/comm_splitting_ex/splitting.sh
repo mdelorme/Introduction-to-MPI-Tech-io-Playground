@@ -15,7 +15,7 @@ if [[ $rc != 0 ]]; then
 fi
 echo "Compilation is OK"
 
-mpirun -mca btl tcp,sm,self -np 8 ./splitting.sh
+mpirun -mca btl tcp,sm,self -np 8 ./splitting
 rc=$?
 
 if [[ $rc !=0 ]]; then
