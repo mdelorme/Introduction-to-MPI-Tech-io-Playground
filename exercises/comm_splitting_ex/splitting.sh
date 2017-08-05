@@ -18,6 +18,6 @@ echo "Compilation is OK"
 mpirun -mca btl tcp,sm,self -np 8 ./splitting
 rc=$?
 
-if [[ $rc !=0 ]]; then
+if [[ $rc != 0 ]]; then
     echo "TECHIO> success false"
 fi
