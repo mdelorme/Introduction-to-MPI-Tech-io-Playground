@@ -17,31 +17,9 @@ void splitting() {
   // With only one call to MPI_Comm_split you should be able to split processes 0-3 in custom_comm1
   // and processes 4-6 in custom_comm2
   
-  if (world_rank < 4) {
-    color = 1;
-    new_comm = &custom_comm1;
-  }
-  else if (world_rank < 7) {
-    color = 2;
-    new_comm = &custom_comm2;
-  }
-  else {
-    color = MPI_UNDEFINED;
-    new_comm = &tmp;
-  }
 
-  MPI_Comm_split(MPI_COMM_WORLD, color, world_rank, new_comm);
 
   // 2- Second splitting here
   // Now put processes 0 and 4 in custom_comm3
-  if (world_rank == 0 || world_rank == 4) {
-    color = 0;
-    new_comm = &custom_comm3;
-  }
-  else {
-    color = MPI_UNDEFINED;
-    new_comm = &tmp;
-  }
 
-  MPI_Comm_split(MPI_COMM_WORLD, color, world_rank, new_comm);
 }
