@@ -1,1 +1,0 @@
-# Amdahl's and Gustafson's laws
