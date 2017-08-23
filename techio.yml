@@ -56,37 +56,23 @@ plan:
       - title: Collective communications - conclusion
         statement: markdowns/coll_conclusion.md
 
-  - title: Communicators and topologies
-    description: This chapters goes over the creation of custom communicators
+  - title: Additional features
+    description: This chapters goes over the things we did not have time to talk about
     plan:
-      - title: Introduction to communicators
-        statement: markdowns/comm_intro.md
+      - title: Additional features
+        statement: markdowns/misc_intro.md
       - title: Splitting
-        statement: markdowns/comm_splitting.md
+        statement: markdowns/misc_splitting.md
       - title: Splitting - exercise
-        statement: markdowns/comm_splitting_ex.md
-      - title: Cartesian topologies
-        statement: markdowns/comm_cart.md
-      - title: Cartesian topologies - exercise
-        statement: markdowns/comm_cart_ex.md
-      - title: Communicators - conclusion
-        statement: markdowns/comm_conclusion.md
-
-  - title: Scalability
-    description: This chapter gives an introduction to scalability and performance evaluation
-    plan:
-      - title: Introduction
-        statement: markdowns/scal_intro.md
-      - title: Measuring execution speed
-        statement: markdowns/scal_speed.md
-      - title: Amdahl's and Gustafson's law
-        statement: markdowns/scal_amdahl.md
-      - title: Strong and weak scaling
-        statement: markdowns/scal_scaling.md
-      - title: Profiling MPI applications
-        statement: markdowns/scal_profiling.md
-      - title: Scalability - conclusion
-        statement: markdowns/scal_conclusion.md
+        statement: markdowns/misc_splitting_ex.md
+      - title: Measuring time
+        statement: markdowns/misc_time.md
+      - title: Custom types
+        statement: markdowns/misc_custom_types.md
+      - title: Custom types - exercise
+      	statement: markdowns/misc_custom_types_ex.md
+      - title: A brief overview of the rest of MPI
+        statement: markdowns/misc_the_rest.md
 
   - title: Conclusion
     description: Conclusion chapter
