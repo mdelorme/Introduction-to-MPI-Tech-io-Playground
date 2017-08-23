@@ -70,7 +70,7 @@ plan:
       - title: Custom types
         statement: markdowns/misc_custom_types.md
       - title: Custom types - exercise
-      	statement: markdowns/misc_custom_types_ex.md
+        statement: markdowns/misc_custom_types_ex.md
       - title: A brief overview of the rest of MPI
         statement: markdowns/misc_the_rest.md
 
