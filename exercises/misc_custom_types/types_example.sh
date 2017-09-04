@@ -2,8 +2,8 @@
 
 echo -e "Compiling"
 cd misc_custom_types
-rm -rf type_example
-mpicxx -o type_example type_example.cpp 2> err_log
+rm -rf types_example
+mpicxx -o types_example types_example.cpp 2> err_log
 
 rc=$?
 if [[ $rc != 0 ]]; then
@@ -19,7 +19,7 @@ rc=0
 
 echo -e "Execution ... "
 
-mpirun -mca btl sm,tcp,self -np 2 ./type_example < input
+mpirun -mca btl sm,tcp,self -np 2 ./types_example < input
 rm -rf out
 
 
