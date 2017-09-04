@@ -3,7 +3,7 @@
 echo -e "Compiling"
 cd misc_custom_types
 rm -rf types_example
-mpicxx -o types_example types_example.cpp 2> err_log
+mpicxx -std=c++11 -o types_example types_example.cpp 2> err_log
 
 rc=$?
 if [[ $rc != 0 ]]; then
