@@ -8,7 +8,7 @@ This section will cover three topics :
 * Time measurement
 * Custom type definition
 
-The section ends with a list of interesting features of MPI that we have not covered in this course.
+The section ends with a list of interesting features of MPI that we have not covered in this course. 
 
 
 

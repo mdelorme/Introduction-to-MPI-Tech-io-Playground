@@ -1,6 +1,6 @@
 ## Communicator splitting
 
-As you might remember from the introduction, it is possible to create your own communicators in MPI. That's what we are going to see in this lesson. Now communicators are a complex subject in MPI and the standard documentation of MPI dedicates a full chapter to them and to related concepts, so bear in mind that we will only be scratching the surface of a very complex and advanced topic. We will limit ourselves, here, at the most straightforward way of creating a new communicator : splitting.
+As you might remember from the introduction, it is possible to create your own communicators in MPI and use them instead of `MPI_COMM_WORLD`. That's what we are going to see in this lesson. Communicators are a complex subject in MPI and the standard documentation of MPI dedicates a full chapter to them and to related concepts so bear in mind that we will only be scratching the surface of a very broad and advanced topic. Here, we will limit ourselves at the most straightforward way of creating a new communicator : splitting.
 
 ### Definitions
 
