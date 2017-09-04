@@ -19,7 +19,7 @@ rc=0
 
 echo -e "Execution ... "
 
-mpirun -mca btl sm,tcp,self -np 2 ./types_example < input
+mpirun -mca btl sm,tcp,self -np 2 ./types_example
 rm -rf out
 
 
