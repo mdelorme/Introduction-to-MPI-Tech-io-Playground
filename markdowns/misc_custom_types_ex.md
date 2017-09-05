@@ -39,7 +39,7 @@ Finally, we store the resulting datatype in `new_type`.
 
 Knowing this, you are ready to optimise the example code we gave in last lesson, especially, removing all the copies in memory and transferring all the data using only one gather communication.
 
-@[Custom struct datatype]({"stubs": ["misc_custom_types/create_struct.cpp"], "command": "bash misc_custom_types/create_struct.sh"})
+@[Custom struct datatype]({"stubs": ["misc_custom_types/create_struct.cpp"], "command": "bash misc_custom_types/create_struct.sh"}, "layout": "aside")
 
 
 
