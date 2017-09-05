@@ -15,4 +15,45 @@ Every process generates $`M`$ of these custom structures, and then send them to 
 
 @[Naive version]({"stubs": ["misc_custom_types/types_example.cpp"], "command": "bash misc_custom_types/types_example.sh"})
 
-As you can see from this very naive version, everything looks a lot more complicated than it should be. First we have to separate the values from every process into two tables, one for integer values, one for double values. Also note how the indexing part starts to become confusing with linear indexing on the double table. Then we have to gather everything in two passes and finally unpack everything in the final structure. 
+As you can see from this very naive version, everything looks a lot more complicated than it should be. First we have to separate the values from every process into two tables, one for integer values, one for double values. Also note how the indexing part starts to become confusing with linear indexing on the double table. Then we have to gather everything in two passes and finally unpack everything in the final structure.
+
+This problem could be solved in a simpler way using derived datatypes. A datatype can be defined easily by specifying a sequence of couples. Each couple represent a **block** : `(type, displacement)`. The type is one of the usual types used in MPI, while the displacement indicates the offset in bytes where this data block starts in memory. For instance, if we wanted to use a structure like this :
+
+```cpp
+struct DataType {
+  int int_val;
+  char char_val;
+  float float_val;
+};```
+
+We could describe this, as : `[(int, 0), (char, 4), (float, 5)]`. As for the example above, well the description is a bit more complicated since we have 10 double each time, but the idea is the same. Now, there are multiple ways of creating datatypes in MPI. We are going to see the simpler here and another in an exercise.
+
+## Vectors
+
+Of course the simplest form of custom datatype is the simple repetition of the same type of data. For instance, if we were handling points in a 3d reference frame, then we would like to manipulate a `Point` structure with three doubles in it. We can achieve this very simply using the `MPI_Type_contiguous` function. Its prototype is :
+
+```cpp
+int MPI_Type_contiguous(int count, MPI_Datatype old_type, MPI_Datatype *new_type);
+```
+
+So if we want to create a vector datatype, we can easily do :
+
+```cpp
+MPI_Datatype dt_point;
+MPI_Type_contiguous(3, MPI_DOUBLE, &dt_point);
+```
+
+We are not entirely done here, we need to **commit** the datatype. This is a mandatory operation, and if you don't do that, and use your new datatype in communications, you will end up with invalid datatype errors. You can commit by simply calling `MPI_Type_commit` :
+
+```cpp
+MPI_Type_commit(&dt_point);
+```
+
+Then we can freely use this in communications:
+
+@[Vector datatype]({"stubs": ["misc_custom_types/vector_example.cpp"], "command": "bash misc_custom_types/vector_example.sh"})
+
+
+
+
+
