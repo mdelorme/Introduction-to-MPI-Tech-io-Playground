@@ -2,8 +2,8 @@
 
 echo -e "Compiling"
 cd misc_custom_types
-rm -rf create_struct type_example
-mpicxx -std=c++11 -o type_example type_example.cpp 2> err_log
+rm -rf create_struct types_example
+mpicxx -std=c++11 -o types_example types_example.cpp 2> err_log
 mpicxx -std=c++11 -o create_struct create_struct.cpp 2> err_log
 
 rc=$?
