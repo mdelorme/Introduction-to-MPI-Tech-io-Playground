@@ -24,7 +24,8 @@ struct DataType {
   int int_val;
   char char_val;
   float float_val;
-};```
+};
+```
 
 We could describe this, as : `[(int, 0), (char, 4), (float, 5)]`. As for the example above, well the description is a bit more complicated since we have 10 double each time, but the idea is the same. Now, there are multiple ways of creating datatypes in MPI. We are going to see the simpler here and another in an exercise.
 
