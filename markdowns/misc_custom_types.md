@@ -27,7 +27,7 @@ struct DataType {
 };
 ```
 
-We could describe this, as : `[(int, 0), (char, 4), (float, 5)]`. As for the example above, well the description is a bit more complicated since we have 10 double each time, but the idea is the same. Now, there are multiple ways of creating datatypes in MPI. We are going to see the simpler here and another in an exercise.
+We could describe this, as : `[(int, 0), (char, 4), (float, 5)]`. As for the example above, well the description is a bit more complicated since we have 10 double each time, but the idea is the same. Now, there are multiple ways of creating datatypes in MPI. For instance, there is a dedicated way to repeat the same datatype multiple times. There is also a more complex way of creating datatypes by generating lists such as the one showed above. We are going to see the simpler version here and the complex in the following exercise.
 
 ## Vectors
 
@@ -44,7 +44,7 @@ MPI_Datatype dt_point;
 MPI_Type_contiguous(3, MPI_DOUBLE, &dt_point);
 ```
 
-We are not entirely done here, we need to **commit** the datatype. This is a mandatory operation, and if you don't do that, and use your new datatype in communications, you will end up with invalid datatype errors. You can commit by simply calling `MPI_Type_commit` :
+We are not entirely done here, we need to **commit** the datatype. The commit operation allows MPI to generate a formal description of the buffers you will be sending and receiving. This is a mandatory operation. If you don't commit but still use your new datatype in communications, you are most likely to end up with invalid datatype errors. You can commit by simply calling `MPI_Type_commit`. 
 
 ```cpp
 MPI_Type_commit(&dt_point);
@@ -54,7 +54,4 @@ Then we can freely use this in communications:
 
 @[Vector datatype]({"stubs": ["misc_custom_types/vector_example.cpp"], "command": "bash misc_custom_types/vector_example.sh"})
 
-
-
-
-
+Let's now move on to an exercise on custom datatypes.
