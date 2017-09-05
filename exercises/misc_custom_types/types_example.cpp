@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
   constexpr int n_structure_per_process = 5; // M = 5
 
   // Random generator init
-  srand((int)rank * MPI_Wtime());
+  srand(rank * 10);
   
   // Creating the dataset
   CustomData data[n_structure_per_process];
@@ -29,9 +29,9 @@ int main(int argc, char **argv) {
   // Generating the data
   for (int i=0; i < n_structure_per_process; ++i) {
     // Terrible way of generating random numbers, don't reproduce this at home
-    data[i].n_values = rand() % DOUBLE_MAX + 1; 
-    for (int j=0; j < data[i].n_values; ++j)
-      data[i].values[j] = (double)rand() / (double)RAND_MAX;
+    data[i].n_values = rand() % DOUBLE_MAX + 1;
+    for (int j=0; j < DOUBLE_MAX; ++j)
+      data[i].values[j] = (j < data[i].n_values ? (double)rand() / (double)RAND_MAX : 0.0);
   }
 
   // Copying the data to two different arrays
@@ -61,6 +61,7 @@ int main(int argc, char **argv) {
   if (rank == 0) {
     // Recopying the data and printing
     CustomData gathered_data[n_structure_per_process * size];
+    memset(gathered_data, n_structure_per_process * size * sizeof(CustomData));
     for (int i=0; i < size; ++i) {
       for (int j=0; j < n_structure_per_process; ++j) {
 	int data_id = i * n_structure_per_process + j; // Linear index
