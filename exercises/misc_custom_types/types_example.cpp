@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
   if (rank == 0) {
     // Recopying the data and printing
     CustomData gathered_data[n_structure_per_process * size];
-    memset(gathered_data, n_structure_per_process * size * sizeof(CustomData));
+    memset(gathered_data, 0, n_structure_per_process * size * sizeof(CustomData));
     for (int i=0; i < size; ++i) {
       for (int j=0; j < n_structure_per_process; ++j) {
 	int data_id = i * n_structure_per_process + j; // Linear index
