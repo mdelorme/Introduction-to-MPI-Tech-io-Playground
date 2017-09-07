@@ -35,14 +35,16 @@ int main(int argc, char **argv) {
       data[i].values[j] = (j < data[i].n_values ? (double)rand() / (double)RAND_MAX : 0.0);
   }
 
-  MPI_Aint displacements[2]  = {offsetof(CustomData, n_values), offsetof(CustomData, values)};
-  int block_lengths[2]  = {1, DOUBLE_MAX};
-  MPI_Datatype types[2] = {MPI_INT, MPI_DOUBLE};
+  // 1- Here, create all the properties to call MPI_Type_create_struct
+  MPI_Aint displacements[2]  = {};
+  int block_lengths[2]  = {};
+  MPI_Datatype types[2] = {};
   MPI_Datatype custom_dt;
 
-  MPI_Type_create_struct(2, block_lengths, displacements, types, &custom_dt);
-  MPI_Type_commit(&custom_dt);
+  // 2- Create the type, and commit it
 
+
+  // Gathering the data
   CustomData *gathered_data = nullptr;
 
   if (rank == 0)
@@ -51,8 +53,8 @@ int main(int argc, char **argv) {
   MPI_Gather(data, n_structure_per_process, custom_dt,
 	     gathered_data, n_structure_per_process, custom_dt, 0, MPI_COMM_WORLD);
 
+  // And printing it
   if (rank == 0) {
-    // Printing
     for (int i=0; i < size; ++i) {
       for (int j=0; j < n_structure_per_process; ++j) {
 	int data_id = i * n_structure_per_process + j; // Linear index
