@@ -2,7 +2,7 @@
 
 echo -e "Compiling"
 cd misc_custom_types
-rm -rf vecetor_example
+rm -rf vector_example
 mpicxx -std=c++11 -o vector_example vector_example.cpp 2> err_log
 
 rc=$?
