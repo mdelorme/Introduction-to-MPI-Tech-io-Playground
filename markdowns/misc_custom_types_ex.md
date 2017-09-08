@@ -51,7 +51,8 @@ struct MyStruct {
   double b;
   char c;
   float d;
-};```
+};
+```
 
 Then, we could define out displacement table as :
 
