@@ -39,7 +39,7 @@ Please note that C and C++ are not the only languages that can be used to do dis
 
 Yes, it is possible. You need to install an implementation of MPI. If you are using Linux or MacOS, then the simplest way to get an implementation of MPI is to install the latest packages of OpenMPI. If you are using Windows, you can use Cygwin to use OpenMPI or you can install MS-MPI, the Microsoft version. This tutorial is based on OpenMPI, but this should not make any noticeable difference in the commands.
 
-## General Disclaimer
+## Contribute to the course !
 
 This course is an eternal work in progress. The choice of topics and the angle they are attacked from is a completely subjective choice and might be subject to discussion. It is my understanding that we should all collaborate to make these kind of resources better, so if you have any comment, suggestion, addition to make to the course, feel free to contact me or even better, to fork the [github](https://github.com/mdelorme/Introduction-to-MPI-Tech-io-Playground) repo and make your pull requests :)
 
