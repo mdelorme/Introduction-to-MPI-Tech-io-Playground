@@ -17,8 +17,8 @@ If you remember, in the previous lesson we talked about *rank* and *size*. The w
 
 ```cpp
 int size, rank;
-MPI_Comm_Size(MPI_COMM_WORLD, &size);
-MPI_Comm_Rank(MPI_COMM_WORLD, &rank);
+MPI_Comm_size(MPI_COMM_WORLD, &size);
+MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 ```
 
 Note the `MPI_COMM_WORLD`. We talked about it in the previous lesson, but let's just remember that `MPI_COMM_WORLD` indicates that the operation is done on the global communicator that encapsulates every single process of the current run. We will see later what communicators are and how to create them to create groups of processes. For the moment, we will stick with calling MPI on the `WORLD` communicator for this lesson and the next.
