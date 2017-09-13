@@ -10,6 +10,20 @@ int MPI_Probe(int source, int tag, MPI_Comm comm, MPI_Status *status);
 
 Remember that `source` (resp. `tag`) can be `MPI_ANY_SOURCE` (resp. `MPI_ANY_TAG`). The tag and source will be stored in the `status` variable.
 
+## `MPI_Status`
+
+As a reminder, here's the corresponding structure of `MPI_Status` :
+
+```cpp
+struct MPI_Struct {
+  int MPI_SOURCE;
+  int MPI_TAG;
+  int MPI_ERROR;
+  int _cancelled;
+  size_t _ucount;
+};
+```
+
 ## Exercise
 
 You must fill in the function so that the process receives a message from any process. Then writes to stdout `Received a message from process ## with tag ##`. Then, if tag is 0, receive the message as a single integer and add it to `int_sum`. Else, if the tag is 1, receive the message as a single float and add it to the `float_sum` variable.
