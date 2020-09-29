@@ -23,7 +23,7 @@ echo -e "Execution ... "
 rnd1=$(( RANDOM % 100 ))
 rnd2=$(( RANDOM % 100 ))
 
-mpirun -mca btl sm,tcp,self -output-filename out/out -np 1 ./blocking $rnd1 : -np 1 ./blocking $rnd2
+mpirun -mca btl sm,tcp,self -output-filename out/out -np 2 ./blocking $rnd1 $rnd2
 python check_blocking.py $rnd1 $rnd2
 rm -rf out
 
